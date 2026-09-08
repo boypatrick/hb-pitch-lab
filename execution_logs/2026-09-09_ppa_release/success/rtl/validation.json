@@ -1,0 +1,226 @@
+{
+  "tool": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "scoreboards": [
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 0,
+        "DEPTH": 1,
+        "WIDTH": 1
+      },
+      "result": "PASS stream kind=0 depth=1 width=1 transfers=413 stalls=109 full_replace=345\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6240000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 0,
+        "DEPTH": 3,
+        "WIDTH": 8
+      },
+      "result": "PASS stream kind=0 depth=3 width=8 transfers=455 stalls=121 full_replace=193\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6280000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 0,
+        "DEPTH": 4,
+        "WIDTH": 65
+      },
+      "result": "PASS stream kind=0 depth=4 width=65 transfers=462 stalls=128 full_replace=153\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6300000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 0,
+        "DEPTH": 2,
+        "WIDTH": 128
+      },
+      "result": "PASS stream kind=0 depth=2 width=128 transfers=437 stalls=122 full_replace=244\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6260000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 1,
+        "DEPTH": 1,
+        "WIDTH": 1
+      },
+      "result": "PASS stream kind=1 depth=1 width=1 transfers=413 stalls=109 full_replace=345\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6240000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 1,
+        "DEPTH": 3,
+        "WIDTH": 8
+      },
+      "result": "PASS stream kind=1 depth=3 width=8 transfers=430 stalls=109 full_replace=271\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6280000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 1,
+        "DEPTH": 4,
+        "WIDTH": 65
+      },
+      "result": "PASS stream kind=1 depth=4 width=65 transfers=435 stalls=119 full_replace=254\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6300000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 1,
+        "DEPTH": 2,
+        "WIDTH": 128
+      },
+      "result": "PASS stream kind=1 depth=2 width=128 transfers=422 stalls=118 full_replace=311\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6260000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_mac",
+      "parameters": {},
+      "result": "PASS MAC 2x3 data=4 acc=8 accepted=228 results=154\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_mac.sv:41: $finish called at 4020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_mac",
+      "parameters": {
+        "ROWS": 4,
+        "COLS": 4,
+        "DATA_W": 8,
+        "ACC_W": 32
+      },
+      "result": "PASS MAC 4x4 data=8 acc=32 accepted=226 results=144\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_mac.sv:41: $finish called at 4020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_mac",
+      "parameters": {
+        "ROWS": 8,
+        "COLS": 4,
+        "DATA_W": 8,
+        "ACC_W": 32
+      },
+      "result": "PASS MAC 8x4 data=8 acc=32 accepted=233 results=149\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_mac.sv:41: $finish called at 4020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_storage",
+      "parameters": {
+        "DEPTH": 1
+      },
+      "result": "PASS SRAM/RF depth=1 independent banks, sync/async reads, invalid addresses\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_storage.sv:46: $finish called at 66000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_storage",
+      "parameters": {
+        "DEPTH": 3
+      },
+      "result": "PASS SRAM/RF depth=3 independent banks, sync/async reads, invalid addresses\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_storage.sv:46: $finish called at 106000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_storage",
+      "parameters": {
+        "DEPTH": 4
+      },
+      "result": "PASS SRAM/RF depth=4 independent banks, sync/async reads, invalid addresses\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_storage.sv:46: $finish called at 120000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_arbiter",
+      "parameters": {
+        "PORTS": 1
+      },
+      "result": "PASS arbiter ports=1 rotation, hold, sparse and empty requests\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_arbiter.sv:25: $finish called at 2020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_arbiter",
+      "parameters": {
+        "PORTS": 3
+      },
+      "result": "PASS arbiter ports=3 rotation, hold, sparse and empty requests\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_arbiter.sv:25: $finish called at 2020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_arbiter",
+      "parameters": {
+        "PORTS": 4
+      },
+      "result": "PASS arbiter ports=4 rotation, hold, sparse and empty requests\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_arbiter.sv:25: $finish called at 2020000 (1ps)",
+      "selected_module": null
+    },
+    {
+      "test": "tb_mac",
+      "parameters": {
+        "ROWS": 8,
+        "COLS": 4,
+        "DATA_W": 8,
+        "ACC_W": 32
+      },
+      "result": "PASS MAC 8x4 data=8 acc=32 accepted=233 results=149\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_mac.sv:41: $finish called at 4020000 (1ps)",
+      "selected_module": "tensor"
+    },
+    {
+      "test": "tb_memory",
+      "parameters": {
+        "KIND": 0,
+        "N": 4,
+        "WIDTH": 64,
+        "DEPTH": 32
+      },
+      "result": "PASS selected memory kind=0 banks/lanes=4 width=64 depth=32\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_memory.sv:72: $finish called at 100000 (1ps)",
+      "selected_module": "scratch"
+    },
+    {
+      "test": "tb_memory",
+      "parameters": {
+        "KIND": 1,
+        "N": 4,
+        "WIDTH": 32,
+        "DEPTH": 16
+      },
+      "result": "PASS selected memory kind=1 banks/lanes=4 width=32 depth=16\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_memory.sv:72: $finish called at 100000 (1ps)",
+      "selected_module": "rf"
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 0,
+        "WIDTH": 64,
+        "DEPTH": 4
+      },
+      "result": "PASS stream kind=0 depth=4 width=64 transfers=462 stalls=128 full_replace=153\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6300000 (1ps)",
+      "selected_module": "queue"
+    },
+    {
+      "test": "tb_stream",
+      "parameters": {
+        "KIND": 1,
+        "WIDTH": 64,
+        "DEPTH": 2
+      },
+      "result": "PASS stream kind=1 depth=2 width=64 transfers=422 stalls=118 full_replace=311\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_stream.sv:42: $finish called at 6260000 (1ps)",
+      "selected_module": "link"
+    },
+    {
+      "test": "tb_arbiter",
+      "parameters": {
+        "PORTS": 4
+      },
+      "result": "PASS arbiter ports=4 rotation, hold, sparse and empty requests\n/Users/boypatrick/codex/powerpoint/hb_pitch_lab/tests/tb_arbiter.sv:25: $finish called at 2020000 (1ps)",
+      "selected_module": "arbiter"
+    }
+  ],
+  "elaborated_tops": 4,
+  "selected_module_cases": 6,
+  "candidate_point": "72226b2baaccf4a9eb49fb125abc936670159da7617b2a642e1cd094d091cdbc",
+  "scope": "Directed and deterministic randomized simulation; not exhaustive formal proof or physical timing closure."
+}

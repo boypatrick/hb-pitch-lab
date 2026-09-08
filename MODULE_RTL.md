@@ -1,5 +1,7 @@
 # 評估參數 → 對應 RTL
 
+0.3 已增加自動選點、PPA 成本 adapter 與固定驗收，入口為 [OPERATIONS_MANUAL.md](OPERATIONS_MANUAL.md)。以下保留 0.2 的模組與基礎評估契約；新最佳化結果的有效指標請讀 `optimization_binding.json.effective_metrics`。
+
 這一版已建立六種可參數化 SystemVerilog 模組與可執行的匯出流程。評估器與 RTL wrapper 共用同一份已解析參數；不是由 LLM 在每次評估後重新猜一份 RTL。
 
 ```mermaid
@@ -93,7 +95,7 @@ FF_{link}=S(W_{HB}+1).
 - 現有 area 指標是 HB site budget 與端點 proxy，未包含完整 compute／SRAM／RF cell area；不輸出虛構的總 die area。
 - 250 MHz 是設計目標，不代表 timing closure。泛用合成也不能代替製程 Liberty、SRAM macro、HB RC 與 APR。
 
-下一步用 manifest 的 `calibration_key`（module type＋完整參數＋時脈＋RTL library hash），配合 node、library corner、V/T 與 flow 版本記錄 module synthesis／APR 樣本。以這些樣本建立 area、energy/action、leakage、delay 模型，再把每個候選產生的 power trace 投到兩層 floorplan。這個成本匯入與擬合回路已列入 roadmap，尚未實作。
+0.3 已支援完整 point ID 的逐點 PPA 匯入及簡單資源係數模型。下一步用 manifest 的 `calibration_key`（module type＋完整參數＋時脈＋RTL library hash），配合 node、library corner、V/T 與 flow 版本記錄 module synthesis／APR 樣本，建立更完整的 energy/action、leakage、delay 擬合與動態 power trace；這些 action-level 擬合仍在 roadmap 中。
 
 ## 驗證與重現
 

@@ -1,9 +1,11 @@
 .tooldeps/
+.venv/
 __pycache__/
 **/.cache/
 .DS_Store
 *.py[cod]
 *.vvp
+/runs/
 
 # Superseded development snapshots; retain the current generated_v02 example.
 /results/generated_demo/

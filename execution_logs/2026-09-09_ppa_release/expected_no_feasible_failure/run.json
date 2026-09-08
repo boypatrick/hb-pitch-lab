@@ -1,0 +1,82 @@
+{
+  "artifact_sha256": {
+    "QC_REPORT.md": "907df162fe3787ac09bf89af6e2eb2ad055fa846583966061716067dace734e9",
+    "events.jsonl": "b2d0f14437378459b5d84ff94de681ba072f12d41290909b5e6b7a388e7549cf",
+    "logs/python_tests.log": "0267ac12fd4960ffb140cd32a3e2372800fbf124501b84a668dad4be81c0a2f0",
+    "search/OPTIMIZATION.md": "54767572ed4b08390e4c3a0547dd5fa6ae7022a84ddda43401b97c0c42111f99",
+    "search/evaluation/EVALUATION.md": "e7b54d73c516179fa4631f9b9c49a726cf8973a0c5925eae6e108688ace55ec0",
+    "search/evaluation/evaluation.json": "309a48f642fa2e49b5723cb5ddacfcf49de7c31d1bb3a5de6ea67e5f766043b5",
+    "search/inputs/costs.json": "c6be9debd5d5af7e2575a0727a8e56e561df7aabfe67ad58c8537c4d4911bd84",
+    "search/inputs/design.json": "eeb5cf4316c0fb23db3b7b97506ac78edbe6a80fbe70aeec30f276db673b01d1",
+    "search/inputs/environment.json": "1d2819a906d5e3ed3a9048ce3613523e47d37dfd2077f063aee5d1b92085c9d2",
+    "search/inputs/policy.json": "531692e57c4dd70bc3ac56c84c9f2a2c136af5f6e508137f10f0f927b308c073",
+    "search/optimization.json": "3c820a4d44dc31ec777b532b69aa6ab9b9b2564714f873187d84ff5ceaf09209"
+  },
+  "checks": [
+    {
+      "elapsed_seconds": 0.003647,
+      "id": "Q01",
+      "name": "input_schema_and_provenance",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.67826,
+      "id": "Q02",
+      "name": "python_regression_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": "NO_FEASIBLE_SOLUTION; constraints are not automatically relaxed",
+      "elapsed_seconds": 0.029469,
+      "id": "Q03",
+      "name": "exhaustive_optimization",
+      "status": "FAIL"
+    },
+    {
+      "id": "Q04",
+      "name": "deterministic_replay",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "Q05",
+      "name": "selected_rtl_integrity",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "Q06",
+      "name": "rtl_simulation_and_selected_parameters",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "Q07",
+      "name": "generic_synthesis_and_resource_match",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "Q08",
+      "name": "constraints_and_thermal_conservation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "Q09",
+      "name": "completion_artifacts_and_source_stability",
+      "status": "NOT_RUN"
+    }
+  ],
+  "ended_utc": "2026-09-08T19:34:33.178806+00:00",
+  "error": "NO_FEASIBLE_SOLUTION; constraints are not automatically relaxed",
+  "format": "hb-qc-run-v1",
+  "git_dirty": true,
+  "git_head": "c8afc5786bb6a4ea43e9d9305f75ce934f6f8595",
+  "run_id": "20260908T193432Z-db2bbfeabb50",
+  "runtime_versions": {
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "scipy": "1.13.1"
+  },
+  "scope": "Software/RTL/generic synthesis QC; not PPA or thermal signoff.",
+  "selected_point_id": null,
+  "source_sha256": "9a1b767404a51650ff8e92b01f9df3a9ff05f1354f4eb18b95958fe7e982fddd",
+  "started_utc": "2026-09-08T19:34:32.444850+00:00",
+  "status": "FAIL"
+}

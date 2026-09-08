@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "mode": "resource_estimate",
+  "quality": "synthetic",
+  "provenance": "SYNTHETIC regression example. Coefficients are invented for exercising optimization, not measured ASIC data.",
+  "context": {"process": "synthetic", "corner": "synthetic", "voltage_v": 0.8, "temperature_c": 40, "flow": "analytical demonstration only"},
+  "modules": {
+    "int_mac_array": {
+      "area_um2": {"base": 100, "memory_bits": 0, "state_bits": 0.5, "macs_per_cycle": 400},
+      "extra_idle_w": {"base": 0, "memory_bits": 0, "state_bits": 0.000001, "macs_per_cycle": 0.00005}
+    },
+    "banked_sram": {
+      "area_um2": {"base": 100, "memory_bits": 0.08, "state_bits": 0.5, "macs_per_cycle": 0},
+      "extra_idle_w": {"base": 0, "memory_bits": 0.0000001, "state_bits": 0.000001, "macs_per_cycle": 0}
+    },
+    "register_file": {
+      "area_um2": {"base": 100, "memory_bits": 0.3, "state_bits": 0.5, "macs_per_cycle": 0},
+      "extra_idle_w": {"base": 0, "memory_bits": 0.0000002, "state_bits": 0.000001, "macs_per_cycle": 0}
+    },
+    "stream_fifo": {
+      "area_um2": {"base": 50, "memory_bits": 0.3, "state_bits": 0.5, "macs_per_cycle": 0},
+      "extra_idle_w": {"base": 0, "memory_bits": 0.0000002, "state_bits": 0.000001, "macs_per_cycle": 0}
+    },
+    "hb_link": {
+      "area_um2": {"base": 50, "memory_bits": 0, "state_bits": 0.5, "macs_per_cycle": 0},
+      "extra_idle_w": {"base": 0, "memory_bits": 0, "state_bits": 0.000001, "macs_per_cycle": 0}
+    },
+    "rr_arbiter": {
+      "area_um2": {"base": 100, "memory_bits": 0, "state_bits": 0.5, "macs_per_cycle": 0},
+      "extra_idle_w": {"base": 0.0001, "memory_bits": 0, "state_bits": 0.000001, "macs_per_cycle": 0}
+    }
+  }
+}

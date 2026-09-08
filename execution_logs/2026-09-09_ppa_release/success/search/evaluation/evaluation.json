@@ -1,0 +1,4131 @@
+{
+  "format": "hb-module-evaluation-v1",
+  "library_sha256": "723f28b3e53ceab92f6be5581396766157b740d0e5fa590b2d39de9b139dc1a6",
+  "engine_sha256": "e3de3392476be080f9ab3dd98973d74d2b4c9ff3fc319fd02029d40ed287112e",
+  "environment": {
+    "provenance": "SYNTHETIC EXAMPLE ONLY. All dimensions, powers, energies and thermal properties are illustrative assumptions, not TSMC/imec data.",
+    "pitch_um": [
+      8,
+      4,
+      3,
+      2,
+      1,
+      0.8
+    ],
+    "pad_modes": [
+      "constant_fill",
+      "constant_diameter"
+    ],
+    "link_modes": [
+      "fixed_width",
+      "width_sweep"
+    ],
+    "hb": {
+      "window_mm2": 0.04,
+      "signal_fraction": 0.4,
+      "pad_to_pitch_ratio": 0.5,
+      "fixed_pad_diameter_um": 0.5,
+      "pattern_coverage_fraction": 1.0,
+      "cu_path_r_m2k_w": 1e-07,
+      "dielectric_path_r_m2k_w": 2e-06,
+      "lane_rate_gbps": 1.0,
+      "payload_efficiency": 0.8,
+      "endpoint_pj_bit": 0.2,
+      "wire_pj_bit": 0.05,
+      "lane_clock_mw": 0.02,
+      "lane_area_um2": 5
+    },
+    "thermal": {
+      "grid_n": 4,
+      "die_side_mm": 10,
+      "thickness_um": [
+        50,
+        50
+      ],
+      "silicon_k_w_mk": 100,
+      "silicon_heat_capacity_j_m3k": 1600000,
+      "top_boundary_r_m2k_w": 2e-05,
+      "bottom_boundary_r_m2k_w": null,
+      "ambient_c": 40,
+      "top_weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bottom_weights": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    "architectures": [
+      {
+        "name": "coarse_tile_L2",
+        "tile_count": 16,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 4096,
+        "work_ops": 16000000000,
+        "peak_ops_s": 16384000000000,
+        "hb_bytes": 250000000,
+        "sram_gbps": 2048,
+        "noc_gbps": 1024,
+        "external_bytes": 62500000,
+        "external_gbps": 256,
+        "compute_pj_op": 2,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 8,
+        "background_bottom_w": 4
+      },
+      {
+        "name": "bank_to_tensor",
+        "tile_count": 16,
+        "fixed_bits_per_tile": 1024,
+        "endpoint_max_bits_per_tile": 4096,
+        "routing_limit_bits_per_tile": 4096,
+        "work_ops": 16000000000,
+        "peak_ops_s": 16384000000000,
+        "hb_bytes": 2000000000,
+        "sram_gbps": 2048,
+        "noc_gbps": 4096,
+        "external_bytes": 62500000,
+        "external_gbps": 256,
+        "compute_pj_op": 2,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 8,
+        "background_bottom_w": 4
+      },
+      {
+        "name": "RF_lane_traffic_proxy",
+        "tile_count": 16,
+        "fixed_bits_per_tile": 2048,
+        "endpoint_max_bits_per_tile": 8192,
+        "routing_limit_bits_per_tile": 8192,
+        "work_ops": 16000000000,
+        "peak_ops_s": 16384000000000,
+        "hb_bytes": 4000000000,
+        "sram_gbps": 8192,
+        "noc_gbps": 8192,
+        "external_bytes": 62500000,
+        "external_gbps": 256,
+        "compute_pj_op": 2,
+        "memory_pj_hb_byte": 3,
+        "background_top_w": 8,
+        "background_bottom_w": 4
+      }
+    ]
+  },
+  "source_design": {
+    "schema_version": 1,
+    "name": "parameterized_tile",
+    "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+    "environment_file": "demo.json",
+    "clock_hz": 250000000,
+    "tile_count": 2,
+    "physical": {
+      "pitch_um": [
+        8,
+        4,
+        2
+      ],
+      "pad_modes": [
+        "constant_fill"
+      ]
+    },
+    "physical_limits": {
+      "endpoint_max_bits_per_tile": 1024,
+      "routing_limit_bits_per_tile": 1024,
+      "fabric_cap_gbps": 128
+    },
+    "modules": [
+      {
+        "name": "tensor",
+        "type": "int_mac_array",
+        "tier": 0,
+        "parameters": {
+          "ROWS": 4,
+          "COLS": 4,
+          "DATA_W": 8,
+          "ACC_W": 32
+        },
+        "sweep": {
+          "ROWS": [
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "name": "scratch",
+        "type": "banked_sram",
+        "tier": 1,
+        "parameters": {
+          "BANKS": 4,
+          "DATA_W": 64,
+          "DEPTH": 32
+        }
+      },
+      {
+        "name": "rf",
+        "type": "register_file",
+        "tier": 0,
+        "parameters": {
+          "LANES": 4,
+          "DATA_W": 32,
+          "DEPTH": 16
+        }
+      },
+      {
+        "name": "queue",
+        "type": "stream_fifo",
+        "tier": 1,
+        "parameters": {
+          "WIDTH": 64,
+          "DEPTH": 4
+        }
+      },
+      {
+        "name": "link",
+        "type": "hb_link",
+        "tier": 0,
+        "parameters": {
+          "WIDTH": 64,
+          "STAGES": 2
+        },
+        "sweep": {
+          "WIDTH": [
+            64,
+            128,
+            256
+          ]
+        }
+      },
+      {
+        "name": "arbiter",
+        "type": "rr_arbiter",
+        "tier": 1,
+        "parameters": {
+          "PORTS": 4
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "source": "link.WIDTH",
+        "target": "queue.WIDTH"
+      }
+    ],
+    "connections": [
+      {
+        "source": "queue",
+        "target": "link"
+      }
+    ],
+    "evaluation_binding": {
+      "compute": [
+        "tensor"
+      ],
+      "sram": [
+        "scratch"
+      ],
+      "hb_link": "link"
+    },
+    "workload": {
+      "work_ops": 1000000,
+      "hb_bytes": 100000,
+      "external_bytes": 10000,
+      "external_gbps": 32
+    },
+    "costs": {
+      "integer_data_width": 8,
+      "compute_pj_op": 0.5,
+      "memory_pj_hb_byte": 2,
+      "background_top_w": 0.1,
+      "background_bottom_w": 0.1
+    }
+  },
+  "source_sha256": "71ddc692ea0005ce094e926c8a1b97b8fab12eaaa3bb920924cf12a8aaac041d",
+  "points": [
+    {
+      "point_id": "181b5510e10a0fa761a4b630ba5c49bed144630f8be1e65bd137eb0c99492911",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11087815715382647,
+        "bottom_power_w": 0.10607907857691323,
+        "total_power_w": 0.21695723573073972,
+        "energy_mj": 0.013562430720000003,
+        "hb_site_budget_mm2": 0.02048,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06109715330822,
+        "steady_top_tmax_c": 40.06035357776371,
+        "steady_bottom_tmax_c": 40.06109715330822,
+        "steady_gradient_c": 0.027582768915415556,
+        "nodal_residual_w": 2.8210940528072825e-14,
+        "heat_balance_error_w": 8.881784197001252e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "44c6b91ef778a9efde3aa8b1c297ee079741479ed338c6a17f0b11c3de47a586",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11087815715382647,
+        "bottom_power_w": 0.10607907857691323,
+        "total_power_w": 0.21695723573073972,
+        "energy_mj": 0.013562430720000003,
+        "hb_site_budget_mm2": 0.00512,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06109715330822,
+        "steady_top_tmax_c": 40.06035357776371,
+        "steady_bottom_tmax_c": 40.06109715330822,
+        "steady_gradient_c": 0.027582768915415556,
+        "nodal_residual_w": 2.8210940528072825e-14,
+        "heat_balance_error_w": 8.881784197001252e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "8d8014d7b9fcbfb5b0155f1c2689f48f679832b0268acf00d162824dce4276c1",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11087815715382647,
+        "bottom_power_w": 0.10607907857691323,
+        "total_power_w": 0.21695723573073972,
+        "energy_mj": 0.013562430720000003,
+        "hb_site_budget_mm2": 0.00128,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06109715330822,
+        "steady_top_tmax_c": 40.06035357776371,
+        "steady_bottom_tmax_c": 40.06109715330822,
+        "steady_gradient_c": 0.027582768915415556,
+        "nodal_residual_w": 2.8210940528072825e-14,
+        "heat_balance_error_w": 8.881784197001252e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "3ae6e9ef5b331eccb0da9173f9efe2e4eacf01ec871c684bb556b82801f19698",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11215815715382647,
+        "bottom_power_w": 0.10735907857691324,
+        "total_power_w": 0.21951723573073972,
+        "energy_mj": 0.013722461440000002,
+        "hb_site_budget_mm2": 0.04096,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.061811871858595,
+        "steady_top_tmax_c": 40.061059302968374,
+        "steady_bottom_tmax_c": 40.061811871858595,
+        "steady_gradient_c": 0.027901352603393548,
+        "nodal_residual_w": 2.3586167741118658e-14,
+        "heat_balance_error_w": 4.3576253716537394e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "fcb12898048cac754ede14c4f83de41be701161dad3cbfbb0892f6fc1fe08c5e",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11215815715382647,
+        "bottom_power_w": 0.10735907857691324,
+        "total_power_w": 0.21951723573073972,
+        "energy_mj": 0.013722461440000002,
+        "hb_site_budget_mm2": 0.01024,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.061811871858595,
+        "steady_top_tmax_c": 40.061059302968374,
+        "steady_bottom_tmax_c": 40.061811871858595,
+        "steady_gradient_c": 0.027901352603393548,
+        "nodal_residual_w": 2.3586167741118658e-14,
+        "heat_balance_error_w": 4.3576253716537394e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "dcf23a19ac1b9edfe2e9d84233114a9fbfc3e3406195a9eded454c2073f65ad1",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11215815715382647,
+        "bottom_power_w": 0.10735907857691324,
+        "total_power_w": 0.21951723573073972,
+        "energy_mj": 0.013722461440000002,
+        "hb_site_budget_mm2": 0.00256,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.061811871858595,
+        "steady_top_tmax_c": 40.061059302968374,
+        "steady_bottom_tmax_c": 40.061811871858595,
+        "steady_gradient_c": 0.027901352603393548,
+        "nodal_residual_w": 2.3586167741118658e-14,
+        "heat_balance_error_w": 4.3576253716537394e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "1d28d53fa222f1883e1128542ead0350f31cfbeb1cafec99c67b744fc5f941d1",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": false,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "reason": "Data width exceeds bond/endpoint/routing capacity"
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "9b62d72120aa8795788db22fc8ecf200b4511e8f7a612140ce610469769b99d8",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 12.8,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11471815715382647,
+        "bottom_power_w": 0.10991907857691323,
+        "total_power_w": 0.22463723573073968,
+        "energy_mj": 0.01404252288,
+        "hb_site_budget_mm2": 0.02048,
+        "endpoint_cell_area_mm2": 0.00256,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06324130895934,
+        "steady_top_tmax_c": 40.0624707533777,
+        "steady_bottom_tmax_c": 40.06324130895934,
+        "steady_gradient_c": 0.02853851997934953,
+        "nodal_residual_w": 4.171489542681428e-14,
+        "heat_balance_error_w": 1.124100812432971e-14
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "8f471d625002c5b479f7c33a3ac5ebb48018e3c42a6373bd8a15194b24397a0c",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 4,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 12.8,
+        "latency_ms": 0.062512,
+        "bottleneck": "compute",
+        "throughput_tops": 0.015996928589710774,
+        "top_power_w": 0.11471815715382647,
+        "bottom_power_w": 0.10991907857691323,
+        "total_power_w": 0.22463723573073968,
+        "energy_mj": 0.01404252288,
+        "hb_site_budget_mm2": 0.00512,
+        "endpoint_cell_area_mm2": 0.00256,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06324130895934,
+        "steady_top_tmax_c": 40.0624707533777,
+        "steady_bottom_tmax_c": 40.06324130895934,
+        "steady_gradient_c": 0.02853851997934953,
+        "nodal_residual_w": 4.171489542681428e-14,
+        "heat_balance_error_w": 1.124100812432971e-14
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 16000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 1025,
+          "macs_per_cycle": 16,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "72226b2baaccf4a9eb49fb125abc936670159da7617b2a642e1cd094d091cdbc",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute,hb",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12047263003006846,
+        "bottom_power_w": 0.11087631501503424,
+        "total_power_w": 0.2313489450451027,
+        "energy_mj": 0.007232430720000001,
+        "hb_site_budget_mm2": 0.02048,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06564045668952,
+        "steady_top_tmax_c": 40.06486491635453,
+        "steady_bottom_tmax_c": 40.06564045668952,
+        "steady_gradient_c": 0.029956691933001878,
+        "nodal_residual_w": 2.3466471821276258e-14,
+        "heat_balance_error_w": 6.38378239159465e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "59e0ca8d2830c49648da7901298e4d85b3e804e5cbfe455325c6f476ec1179f3",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute,hb",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12047263003006846,
+        "bottom_power_w": 0.11087631501503424,
+        "total_power_w": 0.2313489450451027,
+        "energy_mj": 0.007232430720000001,
+        "hb_site_budget_mm2": 0.00512,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06564045668952,
+        "steady_top_tmax_c": 40.06486491635453,
+        "steady_bottom_tmax_c": 40.06564045668952,
+        "steady_gradient_c": 0.029956691933001878,
+        "nodal_residual_w": 2.3466471821276258e-14,
+        "heat_balance_error_w": 6.38378239159465e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "b420444ae06b281702bff7454a718cf4bdaecb24e720341158115e59d6f70bf8",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 64,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 64,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 64,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 3.2,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute,hb",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12047263003006846,
+        "bottom_power_w": 0.11087631501503424,
+        "total_power_w": 0.2313489450451027,
+        "energy_mj": 0.007232430720000001,
+        "hb_site_budget_mm2": 0.00128,
+        "endpoint_cell_area_mm2": 0.00064,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.06564045668952,
+        "steady_top_tmax_c": 40.06486491635453,
+        "steady_bottom_tmax_c": 40.06564045668952,
+        "steady_gradient_c": 0.029956691933001878,
+        "nodal_residual_w": 2.3466471821276258e-14,
+        "heat_balance_error_w": 6.38378239159465e-16
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 64,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 256,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 130,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "3ff9689c0ad3d9d59f39e8d05b195b3e2b64c62fe19598bc6303557695283712",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12175263003006845,
+        "bottom_power_w": 0.11215631501503423,
+        "total_power_w": 0.23390894504510268,
+        "energy_mj": 0.00731246144,
+        "hb_site_budget_mm2": 0.04096,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.0663551752399,
+        "steady_top_tmax_c": 40.06557064155919,
+        "steady_bottom_tmax_c": 40.0663551752399,
+        "steady_gradient_c": 0.03027527562097987,
+        "nodal_residual_w": 2.830027878708563e-14,
+        "heat_balance_error_w": 2.831068712794149e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "442ba61c2ed6b5d4c4e7656b0b0f5c29d704d6c1dff542a291ffec4f2e7112fe",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12175263003006845,
+        "bottom_power_w": 0.11215631501503423,
+        "total_power_w": 0.23390894504510268,
+        "energy_mj": 0.00731246144,
+        "hb_site_budget_mm2": 0.01024,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.0663551752399,
+        "steady_top_tmax_c": 40.06557064155919,
+        "steady_bottom_tmax_c": 40.0663551752399,
+        "steady_gradient_c": 0.03027527562097987,
+        "nodal_residual_w": 2.830027878708563e-14,
+        "heat_balance_error_w": 2.831068712794149e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "b2c83a68f04a1e86d1c2ec7a74de8b255648e7e12b27fbafdb5523d003c7e7a5",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 128,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 128,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 128,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 6.4,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12175263003006845,
+        "bottom_power_w": 0.11215631501503423,
+        "total_power_w": 0.23390894504510268,
+        "energy_mj": 0.00731246144,
+        "hb_site_budget_mm2": 0.00256,
+        "endpoint_cell_area_mm2": 0.00128,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.0663551752399,
+        "steady_top_tmax_c": 40.06557064155919,
+        "steady_bottom_tmax_c": 40.0663551752399,
+        "steady_gradient_c": 0.03027527562097987,
+        "nodal_residual_w": 2.830027878708563e-14,
+        "heat_balance_error_w": 2.831068712794149e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 128,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 512,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 258,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "cfed22da3456e69d072453bcbc77f673ea07046129e7bbfe08cb360eff69fb65",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 8,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 8,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": false,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 250,
+        "pad_diameter_um": 4.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "reason": "Data width exceeds bond/endpoint/routing capacity"
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "989d00b96547a1d03d1aab7c62f7f6b9c673136eae079bf2d19d73600cdfb67d",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 4,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 4,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 1000,
+        "pad_diameter_um": 2.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 12.8,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12431263003006846,
+        "bottom_power_w": 0.11471631501503424,
+        "total_power_w": 0.2390289450451027,
+        "energy_mj": 0.00747252288,
+        "hb_site_budget_mm2": 0.02048,
+        "endpoint_cell_area_mm2": 0.00256,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.067784612340645,
+        "steady_top_tmax_c": 40.06698209196852,
+        "steady_bottom_tmax_c": 40.067784612340645,
+        "steady_gradient_c": 0.03091244299693585,
+        "nodal_residual_w": 2.6999236180103026e-14,
+        "heat_balance_error_w": 9.658940314238862e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    },
+    {
+      "point_id": "2e4cd1621cbad91e2df38d57185a587106104969667d65a58d3c64508c1006d0",
+      "resolved_design": {
+        "schema_version": 1,
+        "name": "parameterized_tile",
+        "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+        "environment_file": "demo.json",
+        "clock_hz": 250000000,
+        "tile_count": 2,
+        "physical": {
+          "pitch_um": [
+            8,
+            4,
+            2
+          ],
+          "pad_modes": [
+            "constant_fill"
+          ]
+        },
+        "physical_limits": {
+          "endpoint_max_bits_per_tile": 1024,
+          "routing_limit_bits_per_tile": 1024,
+          "fabric_cap_gbps": 128
+        },
+        "modules": [
+          {
+            "name": "tensor",
+            "type": "int_mac_array",
+            "tier": 0,
+            "parameters": {
+              "ROWS": 8,
+              "COLS": 4,
+              "DATA_W": 8,
+              "ACC_W": 32
+            }
+          },
+          {
+            "name": "scratch",
+            "type": "banked_sram",
+            "tier": 1,
+            "parameters": {
+              "BANKS": 4,
+              "DATA_W": 64,
+              "DEPTH": 32
+            }
+          },
+          {
+            "name": "rf",
+            "type": "register_file",
+            "tier": 0,
+            "parameters": {
+              "LANES": 4,
+              "DATA_W": 32,
+              "DEPTH": 16
+            }
+          },
+          {
+            "name": "queue",
+            "type": "stream_fifo",
+            "tier": 1,
+            "parameters": {
+              "WIDTH": 256,
+              "DEPTH": 4
+            }
+          },
+          {
+            "name": "link",
+            "type": "hb_link",
+            "tier": 0,
+            "parameters": {
+              "WIDTH": 256,
+              "STAGES": 2
+            }
+          },
+          {
+            "name": "arbiter",
+            "type": "rr_arbiter",
+            "tier": 1,
+            "parameters": {
+              "PORTS": 4
+            }
+          }
+        ],
+        "bindings": [
+          {
+            "source": "link.WIDTH",
+            "target": "queue.WIDTH"
+          }
+        ],
+        "connections": [
+          {
+            "source": "queue",
+            "target": "link"
+          }
+        ],
+        "evaluation_binding": {
+          "compute": [
+            "tensor"
+          ],
+          "sram": [
+            "scratch"
+          ],
+          "hb_link": "link"
+        },
+        "workload": {
+          "work_ops": 1000000,
+          "hb_bytes": 100000,
+          "external_bytes": 10000,
+          "external_gbps": 32
+        },
+        "costs": {
+          "integer_data_width": 8,
+          "compute_pj_op": 0.5,
+          "memory_pj_hb_byte": 2,
+          "background_top_w": 0.1,
+          "background_bottom_w": 0.1
+        }
+      },
+      "physical": {
+        "pitch_um": 2,
+        "pad_mode": "constant_fill"
+      },
+      "metrics": {
+        "architecture": "parameterized_tile",
+        "pitch_um": 2,
+        "pad_mode": "constant_fill",
+        "link_mode": "fixed_width",
+        "feasible": true,
+        "implemented_bits_per_tile": 256,
+        "signal_capacity_per_tile": 4000,
+        "pad_diameter_um": 1.0,
+        "cu_fill_fraction": 0.19634954084936207,
+        "interface_r_m2k_w": 4.2277566259110027e-07,
+        "hb_gbps": 12.8,
+        "latency_ms": 0.031262,
+        "bottleneck": "compute",
+        "throughput_tops": 0.03198771671678076,
+        "top_power_w": 0.12431263003006846,
+        "bottom_power_w": 0.11471631501503424,
+        "total_power_w": 0.2390289450451027,
+        "energy_mj": 0.00747252288,
+        "hb_site_budget_mm2": 0.00512,
+        "endpoint_cell_area_mm2": 0.00256,
+        "fixed_stack_footprint_mm2": 100,
+        "total_die_silicon_area_mm2": 200,
+        "steady_tmax_c": 40.067784612340645,
+        "steady_top_tmax_c": 40.06698209196852,
+        "steady_bottom_tmax_c": 40.067784612340645,
+        "steady_gradient_c": 0.03091244299693585,
+        "nodal_residual_w": 2.6999236180103026e-14,
+        "heat_balance_error_w": 9.658940314238862e-15
+      },
+      "derived_architecture": {
+        "name": "parameterized_tile",
+        "tile_count": 2,
+        "fixed_bits_per_tile": 256,
+        "endpoint_max_bits_per_tile": 1024,
+        "routing_limit_bits_per_tile": 1024,
+        "peak_ops_s": 32000000000,
+        "sram_gbps": 16.0,
+        "noc_gbps": 128,
+        "startup_latency_s": 1.2e-08,
+        "work_ops": 1000000,
+        "hb_bytes": 100000,
+        "external_bytes": 10000,
+        "external_gbps": 32,
+        "compute_pj_op": 0.5,
+        "memory_pj_hb_byte": 2,
+        "background_top_w": 0.1,
+        "background_bottom_w": 0.1
+      },
+      "module_resources": {
+        "tensor": {
+          "memory_bits": 0,
+          "state_bits": 2049,
+          "macs_per_cycle": 32,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "scratch": {
+          "memory_bits": 8192,
+          "state_bits": 260,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 1
+        },
+        "rf": {
+          "memory_bits": 2048,
+          "state_bits": 0,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 256,
+          "latency_cycles": 0
+        },
+        "queue": {
+          "memory_bits": 1024,
+          "state_bits": 7,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 1
+        },
+        "link": {
+          "memory_bits": 0,
+          "state_bits": 514,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 2
+        },
+        "arbiter": {
+          "memory_bits": 0,
+          "state_bits": 2,
+          "macs_per_cycle": 0,
+          "read_bits_per_cycle": 0,
+          "latency_cycles": 0
+        }
+      }
+    }
+  ],
+  "scope": "Parameterized module benchmarks. No GPU program execution or physical signoff."
+}

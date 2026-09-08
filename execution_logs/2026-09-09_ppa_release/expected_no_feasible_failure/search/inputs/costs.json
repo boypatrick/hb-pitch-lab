@@ -1,0 +1,99 @@
+{
+  "context": {
+    "corner": "synthetic",
+    "flow": "analytical demonstration only",
+    "process": "synthetic",
+    "temperature_c": 40,
+    "voltage_v": 0.8
+  },
+  "mode": "resource_estimate",
+  "modules": {
+    "banked_sram": {
+      "area_um2": {
+        "base": 100,
+        "macs_per_cycle": 0,
+        "memory_bits": 0.08,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0,
+        "macs_per_cycle": 0,
+        "memory_bits": 1e-07,
+        "state_bits": 1e-06
+      }
+    },
+    "hb_link": {
+      "area_um2": {
+        "base": 50,
+        "macs_per_cycle": 0,
+        "memory_bits": 0,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0,
+        "macs_per_cycle": 0,
+        "memory_bits": 0,
+        "state_bits": 1e-06
+      }
+    },
+    "int_mac_array": {
+      "area_um2": {
+        "base": 100,
+        "macs_per_cycle": 400,
+        "memory_bits": 0,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0,
+        "macs_per_cycle": 5e-05,
+        "memory_bits": 0,
+        "state_bits": 1e-06
+      }
+    },
+    "register_file": {
+      "area_um2": {
+        "base": 100,
+        "macs_per_cycle": 0,
+        "memory_bits": 0.3,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0,
+        "macs_per_cycle": 0,
+        "memory_bits": 2e-07,
+        "state_bits": 1e-06
+      }
+    },
+    "rr_arbiter": {
+      "area_um2": {
+        "base": 100,
+        "macs_per_cycle": 0,
+        "memory_bits": 0,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0.0001,
+        "macs_per_cycle": 0,
+        "memory_bits": 0,
+        "state_bits": 1e-06
+      }
+    },
+    "stream_fifo": {
+      "area_um2": {
+        "base": 50,
+        "macs_per_cycle": 0,
+        "memory_bits": 0.3,
+        "state_bits": 0.5
+      },
+      "extra_idle_w": {
+        "base": 0,
+        "macs_per_cycle": 0,
+        "memory_bits": 2e-07,
+        "state_bits": 1e-06
+      }
+    }
+  },
+  "provenance": "SYNTHETIC regression example. Coefficients are invented for exercising optimization, not measured ASIC data.",
+  "quality": "synthetic",
+  "schema_version": 1
+}

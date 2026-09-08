@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "selection": "weighted_sum",
+  "objectives": [
+    {"metric": "area_mm2", "direction": "min", "weight": 0.3, "scale": 0.03},
+    {"metric": "power_w", "direction": "min", "weight": 0.3, "scale": 0.3},
+    {"metric": "latency_ms", "direction": "min", "weight": 0.4, "scale": 0.04}
+  ],
+  "constraints": {
+    "latency_ms": {"max": 0.04},
+    "steady_tmax_c": {"max": 85},
+    "area_mm2": {"max": 0.1},
+    "sram_bytes_per_tile": {"min": 1024},
+    "rf_bytes_per_tile": {"min": 256},
+    "fifo_bytes_per_tile": {"min": 32}
+  },
+  "cost_model_file": "costs_synthetic.json",
+  "max_candidates": 256,
+  "quality_requirement": "allow_estimates",
+  "tie_breakers": [{"metric": "pitch_um", "direction": "max"}]
+}

@@ -1,0 +1,503 @@
+{
+  "algorithm": "exhaustive",
+  "candidates": [
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.017917119999999998,
+        "bottom_power_w": 0.10855787857691324,
+        "energy_mj": 0.014013017216000002,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.02048,
+        "heat_balance_error_w": 1.1268763699945339e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 2.89082993654155e-14,
+        "pitch_um": 8,
+        "power_w": 0.2241652357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06335596503519,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11560735715382647
+      },
+      "point_id": "181b5510e10a0fa761a4b630ba5c49bed144630f8be1e65bd137eb0c99492911",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.017917119999999998,
+        "bottom_power_w": 0.10855787857691324,
+        "energy_mj": 0.014013017216000002,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.00512,
+        "heat_balance_error_w": 1.1268763699945339e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 2.89082993654155e-14,
+        "pitch_um": 4,
+        "power_w": 0.2241652357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06335596503519,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11560735715382647
+      },
+      "point_id": "44c6b91ef778a9efde3aa8b1c297ee079741479ed338c6a17f0b11c3de47a586",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.017917119999999998,
+        "bottom_power_w": 0.10855787857691324,
+        "energy_mj": 0.014013017216000002,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.00128,
+        "heat_balance_error_w": 1.1268763699945339e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 2.89082993654155e-14,
+        "pitch_um": 2,
+        "power_w": 0.2241652357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06335596503519,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11560735715382647
+      },
+      "point_id": "8d8014d7b9fcbfb5b0155f1c2689f48f679832b0268acf00d162824dce4276c1",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.01819872,
+        "bottom_power_w": 0.10994027857691324,
+        "energy_mj": 0.0141954522368,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.04096,
+        "heat_balance_error_w": 1.0297318553398327e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 3.4899166889701405e-14,
+        "pitch_um": 8,
+        "power_w": 0.2270836357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06418756430464,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11714335715382647
+      },
+      "point_id": "3ae6e9ef5b331eccb0da9173f9efe2e4eacf01ec871c684bb556b82801f19698",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.01819872,
+        "bottom_power_w": 0.10994027857691324,
+        "energy_mj": 0.0141954522368,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.01024,
+        "heat_balance_error_w": 1.0297318553398327e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 3.4899166889701405e-14,
+        "pitch_um": 4,
+        "power_w": 0.2270836357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06418756430464,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11714335715382647
+      },
+      "point_id": "fcb12898048cac754ede14c4f83de41be701161dad3cbfbb0892f6fc1fe08c5e",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.01819872,
+        "bottom_power_w": 0.10994027857691324,
+        "energy_mj": 0.0141954522368,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.00256,
+        "heat_balance_error_w": 1.0297318553398327e-14,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 3.4899166889701405e-14,
+        "pitch_um": 2,
+        "power_w": 0.2270836357307397,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06418756430464,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.11714335715382647
+      },
+      "point_id": "dcf23a19ac1b9edfe2e9d84233114a9fbfc3e3406195a9eded454c2073f65ad1",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": null,
+      "point_id": "1d28d53fa222f1883e1128542ead0350f31cfbeb1cafec99c67b744fc5f941d1",
+      "reasons": [
+        "hb_capacity: Data width exceeds bond/endpoint/routing capacity"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.01876192,
+        "bottom_power_w": 0.11270507857691323,
+        "energy_mj": 0.0145603222784,
+        "fifo_bytes_per_tile": 128.0,
+        "hb_site_budget_mm2": 0.02048,
+        "heat_balance_error_w": 8.326672684688674e-15,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 1.9838297671270766e-14,
+        "pitch_um": 4,
+        "power_w": 0.23292043573073967,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06585076284353,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.12021535715382646
+      },
+      "point_id": "9b62d72120aa8795788db22fc8ecf200b4511e8f7a612140ce610469769b99d8",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.01876192,
+        "bottom_power_w": 0.11270507857691323,
+        "energy_mj": 0.0145603222784,
+        "fifo_bytes_per_tile": 128.0,
+        "hb_site_budget_mm2": 0.00512,
+        "heat_balance_error_w": 8.326672684688674e-15,
+        "latency_ms": 0.062512,
+        "nodal_residual_w": 1.9838297671270766e-14,
+        "pitch_um": 2,
+        "power_w": 0.23292043573073967,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06585076284353,
+        "throughput_tops": 0.015996928589710774,
+        "timing_wns_ns": null,
+        "top_power_w": 0.12021535715382646
+      },
+      "point_id": "8f471d625002c5b479f7c33a3ac5ebb48018e3c42a6373bd8a15194b24397a0c",
+      "reasons": [
+        "latency_ms:above_max",
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.03174112,
+        "bottom_power_w": 0.11335511501503424,
+        "energy_mj": 0.007571810992000001,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.02048,
+        "heat_balance_error_w": 6.300515664747763e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.926391767799075e-14,
+        "pitch_um": 8,
+        "power_w": 0.2422049450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06931722024878,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.12884983003006845
+      },
+      "point_id": "72226b2baaccf4a9eb49fb125abc936670159da7617b2a642e1cd094d091cdbc",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.03174112,
+        "bottom_power_w": 0.11335511501503424,
+        "energy_mj": 0.007571810992000001,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.00512,
+        "heat_balance_error_w": 6.300515664747763e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.926391767799075e-14,
+        "pitch_um": 4,
+        "power_w": 0.2422049450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06931722024878,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.12884983003006845
+      },
+      "point_id": "59e0ca8d2830c49648da7901298e4d85b3e804e5cbfe455325c6f476ec1179f3",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.03174112,
+        "bottom_power_w": 0.11335511501503424,
+        "energy_mj": 0.007571810992000001,
+        "fifo_bytes_per_tile": 32.0,
+        "hb_site_budget_mm2": 0.00128,
+        "heat_balance_error_w": 6.300515664747763e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.926391767799075e-14,
+        "pitch_um": 2,
+        "power_w": 0.2422049450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.06931722024878,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.12884983003006845
+      },
+      "point_id": "b420444ae06b281702bff7454a718cf4bdaecb24e720341158115e59d6f70bf8",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.032022720000000005,
+        "bottom_power_w": 0.11473751501503424,
+        "energy_mj": 0.0076630460127999995,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.04096,
+        "heat_balance_error_w": 5.3013149425851225e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.9032332093947844e-14,
+        "pitch_um": 8,
+        "power_w": 0.2451233450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.070148819518224,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.13038583003006846
+      },
+      "point_id": "3ff9689c0ad3d9d59f39e8d05b195b3e2b64c62fe19598bc6303557695283712",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.032022720000000005,
+        "bottom_power_w": 0.11473751501503424,
+        "energy_mj": 0.0076630460127999995,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.01024,
+        "heat_balance_error_w": 5.3013149425851225e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.9032332093947844e-14,
+        "pitch_um": 4,
+        "power_w": 0.2451233450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.070148819518224,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.13038583003006846
+      },
+      "point_id": "442ba61c2ed6b5d4c4e7656b0b0f5c29d704d6c1dff542a291ffec4f2e7112fe",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.032022720000000005,
+        "bottom_power_w": 0.11473751501503424,
+        "energy_mj": 0.0076630460127999995,
+        "fifo_bytes_per_tile": 64.0,
+        "hb_site_budget_mm2": 0.00256,
+        "heat_balance_error_w": 5.3013149425851225e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 2.9032332093947844e-14,
+        "pitch_um": 2,
+        "power_w": 0.2451233450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.070148819518224,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.13038583003006846
+      },
+      "point_id": "b2c83a68f04a1e86d1c2ec7a74de8b255648e7e12b27fbafdb5523d003c7e7a5",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": null,
+      "point_id": "cfed22da3456e69d072453bcbc77f673ea07046129e7bbfe08cb360eff69fb65",
+      "reasons": [
+        "hb_capacity: Data width exceeds bond/endpoint/routing capacity"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.032585920000000004,
+        "bottom_power_w": 0.11750231501503423,
+        "energy_mj": 0.007845516054400002,
+        "fifo_bytes_per_tile": 128.0,
+        "hb_site_budget_mm2": 0.02048,
+        "heat_balance_error_w": 3.2751579226442118e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 3.081476046551401e-14,
+        "pitch_um": 4,
+        "power_w": 0.2509601450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.07181201805712,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.13345783003006848
+      },
+      "point_id": "989d00b96547a1d03d1aab7c62f7f6b9c673136eae079bf2d19d73600cdfb67d",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    },
+    {
+      "eligible": false,
+      "metrics": {
+        "area_mm2": 0.032585920000000004,
+        "bottom_power_w": 0.11750231501503423,
+        "energy_mj": 0.007845516054400002,
+        "fifo_bytes_per_tile": 128.0,
+        "hb_site_budget_mm2": 0.00512,
+        "heat_balance_error_w": 3.2751579226442118e-15,
+        "latency_ms": 0.031262,
+        "nodal_residual_w": 3.081476046551401e-14,
+        "pitch_um": 2,
+        "power_w": 0.2509601450451027,
+        "rf_bytes_per_tile": 256.0,
+        "sram_bytes_per_tile": 1024.0,
+        "steady_tmax_c": 40.07181201805712,
+        "throughput_tops": 0.03198771671678076,
+        "timing_wns_ns": null,
+        "top_power_w": 0.13345783003006848
+      },
+      "point_id": "2e4cd1621cbad91e2df38d57185a587106104969667d65a58d3c64508c1006d0",
+      "reasons": [
+        "area_mm2:above_max"
+      ]
+    }
+  ],
+  "cost_context": {
+    "corner": "synthetic",
+    "flow": "analytical demonstration only",
+    "process": "synthetic",
+    "temperature_c": 40,
+    "voltage_v": 0.8
+  },
+  "cost_provenance": "SYNTHETIC regression example. Coefficients are invented for exercising optimization, not measured ASIC data.",
+  "cost_quality": "synthetic",
+  "cost_sha256": "bc6c5ce828dd07aab684e58bfb3f2aa4dacf1ac9378ebdb28cdaa2fb1ae9bccf",
+  "eligible_count": 0,
+  "evaluated_unique_count": 18,
+  "evaluation_sha256": "2ff02be65e6c0b5f76b1365e162dbab9e692ad1f9dd518f9895efa38b5481310",
+  "format": "hb-optimization-v1",
+  "optimizer_sha256": "f5806985f14a9ea46c78bcf160535f244a00f41d194b3bedee9a257a4d61050d",
+  "pareto_ids": [],
+  "policy": {
+    "constraints": {
+      "area_mm2": {
+        "max": 1e-12
+      },
+      "fifo_bytes_per_tile": {
+        "min": 32
+      },
+      "latency_ms": {
+        "max": 0.04
+      },
+      "rf_bytes_per_tile": {
+        "min": 256
+      },
+      "sram_bytes_per_tile": {
+        "min": 1024
+      },
+      "steady_tmax_c": {
+        "max": 85
+      }
+    },
+    "cost_model_file": "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/examples/costs_synthetic.json",
+    "max_candidates": 256,
+    "objectives": [
+      {
+        "direction": "min",
+        "metric": "area_mm2",
+        "scale": 0.03,
+        "weight": 0.3
+      },
+      {
+        "direction": "min",
+        "metric": "power_w",
+        "scale": 0.3,
+        "weight": 0.3
+      },
+      {
+        "direction": "min",
+        "metric": "latency_ms",
+        "scale": 0.04,
+        "weight": 0.4
+      }
+    ],
+    "quality_requirement": "allow_estimates",
+    "schema_version": 1,
+    "selection": "weighted_sum",
+    "tie_breakers": [
+      {
+        "direction": "max",
+        "metric": "pitch_um"
+      }
+    ]
+  },
+  "ranked_ids": [],
+  "raw_grid_count": 18,
+  "scope": "Module benchmark PPA optimization; area is summed module area. Thermal remains analytical. No full GPU or signoff.",
+  "selected_point_id": null,
+  "status": "NO_FEASIBLE_SOLUTION"
+}

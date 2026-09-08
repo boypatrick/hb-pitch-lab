@@ -10,14 +10,19 @@ module tb_stream;
     end else begin
         hb_link #(.WIDTH(WIDTH),.STAGES(DEPTH)) dut(.*);
     end endgenerate
-    reg [WIDTH-1:0] expected[0:2047];
+    localparam integer TOTAL=620+2*DEPTH;
+    reg [WIDTH-1:0] expected[0:TOTAL];
     integer rd=0,wr=0,cycle,stalls=0,full_replace=0;
     reg blocked=0,hold_output=0;reg [WIDTH-1:0] held;
     initial begin
         repeat(2) @(negedge clk);rst=0;
-        for(cycle=0;cycle<600;cycle=cycle+1) begin
-            in_valid=cycle<500 ? (blocked || (($random & 3)!=0)) : blocked;
-            in_data=wr;out_ready=cycle>=500 || (($random & 3)!=0);
+        for(cycle=0;cycle<TOTAL;cycle=cycle+1) begin
+            if(cycle<DEPTH+4) begin in_valid=1;out_ready=0;end
+            else if(cycle<DEPTH+104) begin in_valid=1;out_ready=1;end
+            else if(cycle<DEPTH+604) begin
+                in_valid=blocked || (($random & 3)!=0);out_ready=(($random & 3)!=0);
+            end else begin in_valid=blocked;out_ready=1;end
+            in_data=wr;
             @(posedge clk);
             if(hold_output && (!out_valid || out_data!==held)) $fatal(1,"unstable stalled output");
             hold_output=out_valid && !out_ready;held=out_data;

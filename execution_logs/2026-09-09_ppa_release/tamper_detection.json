@@ -1,0 +1,5 @@
+{
+  "expected_failure": "artifact tampering",
+  "status": "PASS",
+  "observed_error": "Artifact was changed/missing: search/optimization.json"
+}

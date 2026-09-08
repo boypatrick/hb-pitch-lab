@@ -1,8 +1,19 @@
-# HB Pitch Lab 0.2
+# HB Pitch Lab 0.3
 
 可執行的 **pre-RTL、module-level HB pitch 研究原型**。輸入 JSON，輸出頻寬／延遲／能耗／介面面積預算、兩層溫度與圖表。0.2 新增六類參數化 RTL，能由選定的評估結果匯出固定配置；尚未實作完整 GPU。
 
 新功能入口：[參數評估與 RTL 匯出流程](MODULE_RTL.md)。設定在 `examples/modules.json`，結果示例在 `results/module_demo`，固定配置 RTL 在 `results/generated_v02`。以下原有 `run.py` 流程仍是沒有對應 RTL 的 traffic proxy；必須使用 `module_flow.py` 才能匯出實作。
+
+**0.3 新增可設定目標／限制的完整枚舉 PPA 最佳化、Pareto 集合、逐點 PPA 匯入、九項固定驗收與執行日誌。** 詳細步驟、演算法推導、成本資料格式與失敗處理見 [完整操作手冊](OPERATIONS_MANUAL.md)；其他 AI agent 先讀 [AGENTS.md](AGENTS.md)。
+
+完整執行與驗收（使用未存在的 output 目錄）：
+
+```sh
+python3 quality_check.py run --design examples/modules.json --policy examples/optimization_ppa.json --out runs/ppa_001
+python3 quality_check.py verify --run runs/ppa_001
+```
+
+範例成本是 synthetic。每次 full-QC 都會附加 `execution_logs/history.jsonl`，PASS 必須包含 Q01–Q09 全部通過；沒有跳過工具仍宣告完成的模式。`runs/` 與大型 netlists 不提交 Git，正式執行摘要存入 `execution_logs/`。
 
 **這是未校準的解析模型，不是 SoIC PPA 預測器、signoff 工具或已整合 AccelForge 的完整模擬器。示例中所有物理、電性與工作負載資料都是假設。**
 

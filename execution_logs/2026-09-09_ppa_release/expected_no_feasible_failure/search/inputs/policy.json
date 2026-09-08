@@ -1,0 +1,53 @@
+{
+  "constraints": {
+    "area_mm2": {
+      "max": 1e-12
+    },
+    "fifo_bytes_per_tile": {
+      "min": 32
+    },
+    "latency_ms": {
+      "max": 0.04
+    },
+    "rf_bytes_per_tile": {
+      "min": 256
+    },
+    "sram_bytes_per_tile": {
+      "min": 1024
+    },
+    "steady_tmax_c": {
+      "max": 85
+    }
+  },
+  "cost_model_file": "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/examples/costs_synthetic.json",
+  "max_candidates": 256,
+  "objectives": [
+    {
+      "direction": "min",
+      "metric": "area_mm2",
+      "scale": 0.03,
+      "weight": 0.3
+    },
+    {
+      "direction": "min",
+      "metric": "power_w",
+      "scale": 0.3,
+      "weight": 0.3
+    },
+    {
+      "direction": "min",
+      "metric": "latency_ms",
+      "scale": 0.04,
+      "weight": 0.4
+    }
+  ],
+  "quality_requirement": "allow_estimates",
+  "schema_version": 1,
+  "selection": "weighted_sum",
+  "tie_breakers": [
+    {
+      "direction": "max",
+      "metric": "pitch_um"
+    }
+  ]
+}

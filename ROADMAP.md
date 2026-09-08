@@ -1,6 +1,6 @@
 # HB pitch 研究 roadmap
 
-更新：2026-09-08。研究主線為 HB pitch × 架構切割粒度的 module-level 探索。依新需求加入「評估參數與 RTL 共用規格 → 凍結候選 → 匯出實作」，先完成六類數位模組；完整 AI GPU 為後續擴充。
+更新：2026-09-09。研究主線為 HB pitch × 架構切割粒度的 module-level 探索。已完成參數化六類 RTL、可設定 PPA 目標的最佳化與固定驗收／日誌；完整 AI GPU 為後續擴充。
 
 ## v0.1：可檢查的解析原型
 
@@ -24,16 +24,30 @@
 - [ ] 加入 FP8/BF16/FP16 arithmetic、格式正確性驗證與相應成本模型。
 - [ ] 加入 NoC router／跨時脈 adapter、foundry SRAM macro adapter。
 
-## v0.3：架構與技術資料校準
+## v0.3：最佳化、品質驗收與 agent 操作交付
+
+- [x] 完整枚舉有限網格、硬限制、Pareto 集合、weighted-sum／lexicographic／單目標選解；超出搜尋上限拒絕執行。
+- [x] PPA／energy／thermal／容量目標與限制；未知欄位、缺失 timing、無可行解不會被忽略。
+- [x] 分離 module area 與 HB slot area；resource estimate 明示 synthetic/estimated，逐點 PPA 支持完整 reported table 與 WNS 門檻。
+- [x] 固定 Q01–Q09：輸入、Python regression、完整搜尋、重現、RTL hashes、選定參數功能模擬、generic synthesis、物理一致性、交付完整性。
+- [x] 每次 full-QC 的 append-only JSONL history／events、PASS/FAIL/NOT_RUN、source/runtime/artifact hashes 與 verify 命令。
+- [x] 完整操作手冊、數學定義／手算案例、失敗處理、AGENTS.md 執行契約。
+- [x] 選定模組的實際參數加入 RTL scoreboard；支援較深 FIFO 的 fill／full-replace／drain 驗證。
+- [x] 發行驗收：45 項 Python tests、23 組 RTL simulations、四個 top 結構檢查與 generic synthesis；九項 QC、獨立 verify、無可行解與 artifact 修改偵測均完成，稽核紀錄存於 execution_logs。
+- [ ] 使用真實製程 module/PPA 樣本替換 synthetic coefficients，確認 cost scope 與有效範圍。
+- [ ] 多 workload／工作負載映射可行性、每 bank 容量／衝突與 uncertainty-aware robust optimization。
+- [ ] 經校準的 clock/tile-count 聯合搜尋、大規模搜尋加速與微架構切割擴充。
+
+## v0.4：架構與技術資料校準
 
 - [ ] 確定要評估的 pitch 範圍、stack、node 與 cooling envelope。
 - [ ] 接 AccelForge／HWComponents（先驗證版本 API 與假設）；不要重寫 mapper。
 - [ ] 匯入 SRAM macro 成本、HB RC／energy、接收發送端與可路由連接密度。
-- [ ] 按 module type／parameters／RTL hash 與 node／corner／flow 匯入合成／APR 的 area、delay、energy/action、leakage；擬合有效範圍內的成本。
+- [ ] 逐點 PPA 匯入已於 v0.3 完成；後續按 module type／parameters／RTL hash 與 node／corner／flow 建立 action-level 成本擬合與有效範圍。
 - [ ] 分離 HBM、NoC、SRAM、HB bytes，加入 bank conflicts、RF dependency 與 buffering。
 - [ ] 保存 per-parameter provenance、有效範圍、uncertainty 與校準／驗證樣本分割。
 
-## v0.4：熱與實體交叉驗證
+## v0.5：熱與實體交叉驗證
 
 - [ ] 以 FEM／量測 unit cell 驗證固定 Cu 比例下的 pitch/spreading 效應。
 - [ ] 加入空間材料圖、實際 active-layer 位置、TSV／BEOL／TIM 與 package。

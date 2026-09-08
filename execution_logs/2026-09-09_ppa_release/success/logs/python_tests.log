@@ -1,0 +1,53 @@
+argv: ["/Library/Developer/CommandLineTools/usr/bin/python3", "-m", "unittest", "discover", "-s", "tests", "-v"]
+test_bound_sweep (test_module_flow.ModuleFlowTests) ... ok
+test_depth_one_resources (test_module_flow.ModuleFlowTests) ... ok
+test_evaluate_export_round_trip (test_module_flow.ModuleFlowTests) ... ok
+test_no_binding_cycle (test_module_flow.ModuleFlowTests) ... ok
+test_no_ready_cycle (test_module_flow.ModuleFlowTests) ... ok
+test_no_silent_width_adaptation (test_module_flow.ModuleFlowTests) ... ok
+test_no_unimplemented_precision (test_module_flow.ModuleFlowTests) ... ok
+test_numerical_resource_contract (test_module_flow.ModuleFlowTests) ... ok
+test_reject_bad_integer_and_clock (test_module_flow.ModuleFlowTests) ... ok
+test_reject_infeasible_and_tampered_export (test_module_flow.ModuleFlowTests) ... ok
+test_reject_stale_library (test_module_flow.ModuleFlowTests) ... ok
+test_thermal_partition_is_explicit (test_module_flow.ModuleFlowTests) ... ok
+test_constraint_boundary_is_inclusive (test_optimizer.OptimizerTests) ... ok
+test_duplicate_json_keys_fail (test_optimizer.OptimizerTests) ... ok
+test_duplicate_objective_and_nonfinite_inputs_rejected (test_optimizer.OptimizerTests) ... ok
+test_export_and_replay_binding_and_no_overwrite (test_optimizer.OptimizerTests) ... ok
+test_full_grid_determinism_and_declared_pitch_tie_break (test_optimizer.OptimizerTests) ... ok
+test_known_resource_area_and_power_equations (test_optimizer.OptimizerTests) ... ok
+test_lexicographic_and_maximize (test_optimizer.OptimizerTests) ... ok
+test_missing_or_tampered_candidate_is_detected (test_optimizer.OptimizerTests) ... ok
+test_missing_timing_and_impossible_constraints_fail_closed (test_optimizer.OptimizerTests) ... ok
+test_no_point_table_fallback_or_fake_reported_estimate (test_optimizer.OptimizerTests) ... ok
+test_pareto_and_weighted_score_against_hand_solution (test_optimizer.OptimizerTests) ... ok
+test_point_table_units_and_thermal_recomputation (test_optimizer.OptimizerTests) ... ok
+test_reported_ppa_requires_timing_constraint (test_optimizer.OptimizerTests) ... ok
+test_search_budget_is_not_implicit_sampling (test_optimizer.OptimizerTests) ... ok
+test_unknown_constraint_is_not_silently_ignored (test_optimizer.OptimizerTests) ... ok
+test_additional_cooling_reduces_peak (test_physics.PhysicsTests) ... ok
+test_bandwidth_saturates_and_lanes_cap (test_physics.PhysicsTests) ... ok
+test_calibration_lookup_and_no_extrapolation (test_physics.PhysicsTests) ... ok
+test_constant_diameter_increases_fill_and_conductance (test_physics.PhysicsTests) ... ok
+test_fixed_width_infeasibility_not_silent_serialization (test_physics.PhysicsTests) ... ok
+test_heat_conservation_nonuniform (test_physics.PhysicsTests) ... ok
+test_invalid_pad_geometry_and_nan_rejected (test_physics.PhysicsTests) ... ok
+test_pitch_alone_does_not_improve_fixed_width_performance (test_physics.PhysicsTests) ... ok
+test_same_cu_fraction_preserves_homogenized_interface (test_physics.PhysicsTests) ... ok
+test_single_column_matches_series_resistances (test_physics.PhysicsTests) ... ok
+test_transient_converges_to_steady_and_conserves_energy (test_physics.PhysicsTests) ... ok
+test_uniform_load_grid_refinement_invariant (test_physics.PhysicsTests) ... ok
+test_zero_power_is_ambient (test_physics.PhysicsTests) ... ok
+test_append_preserves_prior_records (test_quality_check.QualityTests) ... ok
+test_fixed_check_contract (test_quality_check.QualityTests) ... ok
+test_invalid_input_logs_fail_and_does_not_run_tools (test_quality_check.QualityTests) ... Q01 START input_schema_and_provenance
+FAIL: /private/var/folders/7c/wpj631cs3gs_mvbbdbdcr4t40000gn/T/tmpbdgkzhay/run/QC_REPORT.md
+ok
+test_manifest_change_is_detected (test_quality_check.QualityTests) ... ok
+test_missing_required_check_cannot_claim_pass (test_quality_check.QualityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 0.427s
+
+OK

@@ -1,0 +1,16 @@
+rtl/banked_sram.sv
+rtl/hb_link.sv
+rtl/int_mac_array.sv
+rtl/register_file.sv
+rtl/rr_arbiter.sv
+rtl/stream_fifo.sv
+rtl/tensor_wrapper.sv
+rtl/scratch_wrapper.sv
+rtl/rf_wrapper.sv
+rtl/queue_wrapper.sv
+rtl/link_wrapper.sv
+rtl/arbiter_wrapper.sv
+rtl/lab_tile_top.sv
+rtl/lab_system_top.sv
+rtl/lab_tier0_top.sv
+rtl/lab_tier1_top.sv
