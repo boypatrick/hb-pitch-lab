@@ -1,0 +1,18 @@
+.tooldeps/
+__pycache__/
+**/.cache/
+.DS_Store
+*.py[cod]
+*.vvp
+
+# Superseded development snapshots; retain the current generated_v02 example.
+/results/generated_demo/
+/results/rtl_demo/
+/results/rtl_validation/
+
+# Regenerable synthesis netlists, logs and machine-specific scripts.
+/results/generated_v02/lab_*_top.json
+/results/rtl_validation_v02/*
+!/results/rtl_validation_v02/validation.json
+/results/synthesis_validation_v02/*
+!/results/synthesis_validation_v02/synthesis_validation.json

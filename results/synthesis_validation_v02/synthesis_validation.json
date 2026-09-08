@@ -1,0 +1,26 @@
+{
+  "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)",
+  "point_id": "442ba61c2ed6b5d4c4e7656b0b0f5c29d704d6c1dff542a291ffec4f2e7112fe",
+  "structural_tops": [
+    "lab_system_top",
+    "lab_tile_top",
+    "lab_tier0_top",
+    "lab_tier1_top"
+  ],
+  "model_macs": 64,
+  "yosys_multipliers": 64,
+  "model_memory_bits": 21504,
+  "yosys_memory_bits": 21504,
+  "generic_leaf_cells": 98294,
+  "generic_cell_types": {
+    "$_SDFFE_PP0P_": 5144,
+    "$_NOT_": 310,
+    "$_OR_": 8102,
+    "$_AND_": 22206,
+    "$_XOR_": 14404,
+    "$_MUX_": 26612,
+    "$_DFFE_PP_": 21504,
+    "$_SDFF_PP0_": 12
+  },
+  "scope": "Generic bit-level synthesis without ABC/Liberty/SRAM macro mapping; no physical area, timing, power or SoIC signoff."
+}

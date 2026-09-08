@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "parameterized_tile",
+  "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+  "environment_file": "demo.json",
+  "clock_hz": 250000000,
+  "tile_count": 2,
+  "physical": {"pitch_um": [8,4,2], "pad_modes": ["constant_fill"]},
+  "physical_limits": {"endpoint_max_bits_per_tile": 1024, "routing_limit_bits_per_tile": 1024, "fabric_cap_gbps": 128},
+  "modules": [
+    {"name":"tensor", "type":"int_mac_array", "tier":0,
+     "parameters":{"ROWS":4,"COLS":4,"DATA_W":8,"ACC_W":32}, "sweep":{"ROWS":[4,8]}},
+    {"name":"scratch", "type":"banked_sram", "tier":1,
+     "parameters":{"BANKS":4,"DATA_W":64,"DEPTH":32}},
+    {"name":"rf", "type":"register_file", "tier":0,
+     "parameters":{"LANES":4,"DATA_W":32,"DEPTH":16}},
+    {"name":"queue", "type":"stream_fifo", "tier":1,
+     "parameters":{"WIDTH":64,"DEPTH":4}},
+    {"name":"link", "type":"hb_link", "tier":0,
+     "parameters":{"WIDTH":64,"STAGES":2},"sweep":{"WIDTH":[64,128,256]}},
+    {"name":"arbiter", "type":"rr_arbiter", "tier":1,
+     "parameters":{"PORTS":4}}
+  ],
+  "bindings":[{"source":"link.WIDTH","target":"queue.WIDTH"}],
+  "connections":[{"source":"queue","target":"link"}],
+  "evaluation_binding":{"compute":["tensor"],"sram":["scratch"],"hb_link":"link"},
+  "workload":{"work_ops":1000000,"hb_bytes":100000,"external_bytes":10000,"external_gbps":32},
+  "costs":{"integer_data_width":8,"compute_pj_op":0.5,"memory_pj_hb_byte":2,"background_top_w":0.1,"background_bottom_w":0.1}
+}
