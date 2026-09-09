@@ -1,6 +1,6 @@
 # HB pitch 研究 roadmap
 
-更新：2026-09-09。研究主線為 HB pitch × 架構切割粒度的 module-level 探索。已完成參數化六類 RTL、可設定 PPA 目標的最佳化與固定驗收／日誌；完整 AI GPU 為後續擴充。
+更新：2026-09-09。研究主線為 HB pitch × 架構切割粒度的 module-level 探索。已完成原有六類 RTL／最佳化與第一階段 MTIA-like 可執行 PE/scratch/ME-NMC，操作入口為 MTIA_OPERATIONS.md；完整 AI GPU 與製程校準仍為後續擴充。
 
 ## v0.1：可檢查的解析原型
 
@@ -40,18 +40,29 @@
 
 ## v0.4：架構與技術資料校準
 
+- [x] 原廠資料／Hot Chips 議程查核與五類架構的切割研究設計，見 [架構代表性研究](ARCHITECTURE_REPRESENTATIVENESS.md)。未取得完整付費會議投影片。
+- [x] MTIA-like descriptor INT8/INT32 PE/scratch/ME-NMC：實際 DMA/同步 SRAM/運算/occupied-slot barrier/NIC reduction；保留 MI300-like coarse boundary 與理想 2D baseline。
+- [x] 獨立 mtia schema、ports、resource/action/thermal adapters，Python 選點後匯出 frozen connected RTL；accumulator 保留 PE 內，不跨 HB recurrence。
+- [x] 以 GEMM、embedding/vector 子集執行 dependency simulation，測局部供料收益、HBM/NIC 反例及固定寬度控制；HBM/NIC 只是 rate sources，未實作 controller/PHY。
+- [x] M01–M06 固定全網格 RTL cycle replay／generic synthesis／重現／hash 日誌；新增 MTIA 操作手冊並保留原有 Q01–Q09 回歸。
+- [x] 第一階段交付驗收：63 項 Python tests、50 組 MTIA frozen-wrapper RTL replay、10 組 MTIA synthesis、原有 23 組 RTL cases／四個 top 檢查；M/Q 及兩套 verify 全通過。無可行解、artifact 修改與禁止覆寫的負向驗收留存於 [稽核包](execution_logs/2026-09-09_mtia_release/HANDOFF.md)。
+- [x] 寫出 R01–R06 狀態：R01/R06 PARTIAL、R02/R03 僅對支持 kernel/模型對 RTL PASS、R04/R05 NOT_CALIBRATED；整體 EXPLORATORY，沒有用 M/Q 成功冒充產品代表性。
+- [ ] TPU training/inference 與 SIMT/tensor GPU：各自實作 dataflow/ISA 子集、架構來源與缺項、協定/RTL/成本契約，再跑同類驗收。
+- [ ] 擴大實際工作負載／microarchitecture coverage，完成獨立 PPA holdout、thermal calibration 與 uncertainty-aware decision robustness。
 - [ ] 確定要評估的 pitch 範圍、stack、node 與 cooling envelope。
 - [ ] 接 AccelForge／HWComponents（先驗證版本 API 與假設）；不要重寫 mapper。
 - [ ] 匯入 SRAM macro 成本、HB RC／energy、接收發送端與可路由連接密度。
 - [ ] 逐點 PPA 匯入已於 v0.3 完成；後續按 module type／parameters／RTL hash 與 node／corner／flow 建立 action-level 成本擬合與有效範圍。
-- [ ] 分離 HBM、NoC、SRAM、HB bytes，加入 bank conflicts、RF dependency 與 buffering。
+- [x] MTIA 子系統分開 HBM/NIC、scratch/shared、HB bytes/bits 與各來源 stall，輸出 module power trace 與 PE/ME overlap counts。
+- [ ] 加入 NoC 流量／bank conflicts、RF dependency、load/compute 雙緩衝與其他 memory port 組織。
 - [ ] 保存 per-parameter provenance、有效範圍、uncertainty 與校準／驗證樣本分割。
 
 ## v0.5：熱與實體交叉驗證
 
 - [ ] 以 FEM／量測 unit cell 驗證固定 Cu 比例下的 pitch/spreading 效應。
 - [ ] 加入空間材料圖、實際 active-layer 位置、TSV／BEOL／TIM 與 package。
-- [ ] 匯入動態 module power trace，加入溫度相關 leakage 與節流閉迴路。
+- [x] MTIA 執行事件產生分箱 module power trace，驗證積分能量與空間總功率守恆；目前只以平均功率解 synthetic 穩態 cell network。
+- [ ] 將動態 trace 接入校準 thermal solver，加入溫度相關 leakage 與節流閉迴路。
 - [ ] 選轉折點前／附近／後的 module 配置跑局部 APR；量測 timing／routing／clock／IR。
 - [ ] 保留固定架構與各 pitch 重新最佳化兩組結果，生成含不確定度的 Pareto 圖。
 

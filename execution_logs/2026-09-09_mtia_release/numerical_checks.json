@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "iteration_latency_and_traffic",
+      "width_bits": 16,
+      "predicted_iteration_cycles": 16,
+      "measured_intra_command_gaps": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "expected_counts": {
+        "hbm_bytes": 320,
+        "scratch_read_bytes": 512,
+        "hb_bits": 4928,
+        "mac_ops": 512,
+        "nmc_add_ops": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "iteration_latency_and_traffic",
+      "width_bits": 64,
+      "predicted_iteration_cycles": 10,
+      "measured_intra_command_gaps": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "expected_counts": {
+        "hbm_bytes": 320,
+        "scratch_read_bytes": 512,
+        "hb_bits": 4928,
+        "mac_ops": 512,
+        "nmc_add_ops": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "iteration_latency_and_traffic",
+      "width_bits": 128,
+      "predicted_iteration_cycles": 9,
+      "measured_intra_command_gaps": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "expected_counts": {
+        "hbm_bytes": 320,
+        "scratch_read_bytes": 512,
+        "hb_bits": 4928,
+        "mac_ops": 512,
+        "nmc_add_ops": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "fixed_width_temperature_pitch_control",
+      "width_bits": 16,
+      "workloads": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "fixed_width_temperature_pitch_control",
+      "width_bits": 64,
+      "workloads": 5,
+      "status": "PASS"
+    }
+  ]
+}

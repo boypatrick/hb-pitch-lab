@@ -1,0 +1,139 @@
+{
+  "architectures": [
+    {
+      "background_bottom_w": 4,
+      "background_top_w": 8,
+      "compute_pj_op": 2,
+      "endpoint_max_bits_per_tile": 1024,
+      "external_bytes": 62500000,
+      "external_gbps": 256,
+      "fixed_bits_per_tile": 128,
+      "hb_bytes": 250000000,
+      "memory_pj_hb_byte": 2,
+      "name": "coarse_tile_L2",
+      "noc_gbps": 1024,
+      "peak_ops_s": 16384000000000,
+      "routing_limit_bits_per_tile": 4096,
+      "sram_gbps": 2048,
+      "tile_count": 16,
+      "work_ops": 16000000000
+    },
+    {
+      "background_bottom_w": 4,
+      "background_top_w": 8,
+      "compute_pj_op": 2,
+      "endpoint_max_bits_per_tile": 4096,
+      "external_bytes": 62500000,
+      "external_gbps": 256,
+      "fixed_bits_per_tile": 1024,
+      "hb_bytes": 2000000000,
+      "memory_pj_hb_byte": 2,
+      "name": "bank_to_tensor",
+      "noc_gbps": 4096,
+      "peak_ops_s": 16384000000000,
+      "routing_limit_bits_per_tile": 4096,
+      "sram_gbps": 2048,
+      "tile_count": 16,
+      "work_ops": 16000000000
+    },
+    {
+      "background_bottom_w": 4,
+      "background_top_w": 8,
+      "compute_pj_op": 2,
+      "endpoint_max_bits_per_tile": 8192,
+      "external_bytes": 62500000,
+      "external_gbps": 256,
+      "fixed_bits_per_tile": 2048,
+      "hb_bytes": 4000000000,
+      "memory_pj_hb_byte": 3,
+      "name": "RF_lane_traffic_proxy",
+      "noc_gbps": 8192,
+      "peak_ops_s": 16384000000000,
+      "routing_limit_bits_per_tile": 8192,
+      "sram_gbps": 8192,
+      "tile_count": 16,
+      "work_ops": 16000000000
+    }
+  ],
+  "hb": {
+    "cu_path_r_m2k_w": 1e-07,
+    "dielectric_path_r_m2k_w": 2e-06,
+    "endpoint_pj_bit": 0.2,
+    "fixed_pad_diameter_um": 0.5,
+    "lane_area_um2": 5,
+    "lane_clock_mw": 0.02,
+    "lane_rate_gbps": 1.0,
+    "pad_to_pitch_ratio": 0.5,
+    "pattern_coverage_fraction": 1.0,
+    "payload_efficiency": 0.8,
+    "signal_fraction": 0.4,
+    "window_mm2": 0.04,
+    "wire_pj_bit": 0.05
+  },
+  "link_modes": [
+    "fixed_width",
+    "width_sweep"
+  ],
+  "pad_modes": [
+    "constant_fill",
+    "constant_diameter"
+  ],
+  "pitch_um": [
+    8,
+    4,
+    3,
+    2,
+    1,
+    0.8
+  ],
+  "provenance": "SYNTHETIC EXAMPLE ONLY. All dimensions, powers, energies and thermal properties are illustrative assumptions, not TSMC/imec data.",
+  "thermal": {
+    "ambient_c": 40,
+    "bottom_boundary_r_m2k_w": null,
+    "bottom_weights": [
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      2
+    ],
+    "die_side_mm": 10,
+    "grid_n": 4,
+    "silicon_heat_capacity_j_m3k": 1600000,
+    "silicon_k_w_mk": 100,
+    "thickness_um": [
+      50,
+      50
+    ],
+    "top_boundary_r_m2k_w": 2e-05,
+    "top_weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      3,
+      1,
+      1,
+      3,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  }
+}

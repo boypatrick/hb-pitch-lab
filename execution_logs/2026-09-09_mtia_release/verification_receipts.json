@@ -1,0 +1,75 @@
+[
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "mtia_flow.py",
+      "export",
+      "--run",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_release_20260909",
+      "--point",
+      "ead2debf458c",
+      "--out",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_local_export_20260909"
+    ],
+    "exit_code": 0,
+    "stdout": "EXPORTED: /Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_local_export_20260909\n",
+    "stderr": "",
+    "utc": "2026-09-09T15:57:46.292099+00:00"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "mtia_flow.py",
+      "export",
+      "--run",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_release_20260909",
+      "--point",
+      "ead2debf458c",
+      "--out",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_local_export_20260909"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "ERROR: RTL directory exists; never overwrite frozen exports\n",
+    "utc": "2026-09-09T15:57:51.410973+00:00"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "mtia_flow.py",
+      "verify",
+      "--run",
+      "/var/folders/7c/wpj631cs3gs_mvbbdbdcr4t40000gn/T/mtia_audit_i53v94yy/run"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "ERROR: Artifact changed/missing: search/selected_rtl/rtl/mtia_pe.sv\n",
+    "utc": "2026-09-09T15:57:51.820676+00:00"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "mtia_flow.py",
+      "verify",
+      "--run",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/mtia_release_20260909"
+    ],
+    "exit_code": 0,
+    "stdout": "VERIFIED PASS: 20260909T145004Z-63f950f4ecf0\n",
+    "stderr": "",
+    "utc": "2026-09-09T15:57:54.625046+00:00"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "quality_check.py",
+      "verify",
+      "--run",
+      "/Users/boypatrick/codex/powerpoint/hb_pitch_lab/runs/ppa_mtia_regression_20260909"
+    ],
+    "exit_code": 0,
+    "stdout": "VERIFIED PASS: 20260909T145021Z-03d112c6b44a\n",
+    "stderr": "",
+    "utc": "2026-09-09T15:57:54.911516+00:00"
+  }
+]

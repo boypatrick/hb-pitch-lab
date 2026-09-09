@@ -1,0 +1,355 @@
+{
+  "cases": [
+    {
+      "cycles": 91,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "status": "PASS",
+      "stimulus_sha256": "855010c8d30bee90a413d3e46127b6f5276598940f418b1ad6e0afec0120db15",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10036,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "status": "PASS",
+      "stimulus_sha256": "687888e925eef6b0fe5fdfd51bf4cd8ac54cb2bf27e686de3ac7acda4a90c827",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "status": "PASS",
+      "stimulus_sha256": "c53fe59d75cdc88b2d45bf760ec0e00d950e053d2ccf9bebf415031b6a76f812",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 103,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "status": "PASS",
+      "stimulus_sha256": "6a96909ab6cfbbc222c53890bfd405416cb96bba6794e7257bd2bef32e6409f6",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 111,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "status": "PASS",
+      "stimulus_sha256": "67e998fc1d868dcd69d7329d3c38c848f8ac1b5dc4628f1fc5d542f46529f24e",
+      "workload": "vector"
+    },
+    {
+      "cycles": 254,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "status": "PASS",
+      "stimulus_sha256": "dc7d2fb1ccb53e1e0c009db58234f5ca49bf17c6d37da0152be6a8e4fbef17de",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10043,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "status": "PASS",
+      "stimulus_sha256": "01f5645a0348ea95778b2d2adac544a44f66b7c8e1acf8980ac754563f47e23f",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8395,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "status": "PASS",
+      "stimulus_sha256": "a55ed3826a2cdbe167f9c6d6a8358587200387d055ff845a3be62cb59753b418",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 237,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "status": "PASS",
+      "stimulus_sha256": "8eb459cdfe0796d95bf2eda3345624b607d13452da93f191e0b2253181d8d1b9",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 245,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "status": "PASS",
+      "stimulus_sha256": "c2fd01820ac14840744eb6fafc2ec60b99168155136c47ab850c057b2742ea8c",
+      "workload": "vector"
+    },
+    {
+      "cycles": 322,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "status": "PASS",
+      "stimulus_sha256": "da77d6de6a87ece48ecc0f24ca17bd8b71ea2c047e834e1c3667e0ec7dff918a",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10267,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "status": "PASS",
+      "stimulus_sha256": "9d1371d6bd7b2fd9225ab746550469151d5ec4d5d7a83a08e3df864c5f6d0396",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "status": "PASS",
+      "stimulus_sha256": "a43b6cf17b73023b680d854deb7ea53068ce696af9e6bf88727b37413b75727a",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 340,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "status": "PASS",
+      "stimulus_sha256": "2586c9edfe2ec903b929563f4a3da60fad78b6c9b9466108cef82cd2fe2da537",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 348,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "status": "PASS",
+      "stimulus_sha256": "2f8fa592c5276346daab58927f5b16a84b9260d14e4eaba1b687e87a1d83a1c0",
+      "workload": "vector"
+    },
+    {
+      "cycles": 254,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "status": "PASS",
+      "stimulus_sha256": "dc7d2fb1ccb53e1e0c009db58234f5ca49bf17c6d37da0152be6a8e4fbef17de",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10043,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "status": "PASS",
+      "stimulus_sha256": "01f5645a0348ea95778b2d2adac544a44f66b7c8e1acf8980ac754563f47e23f",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8395,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "status": "PASS",
+      "stimulus_sha256": "a55ed3826a2cdbe167f9c6d6a8358587200387d055ff845a3be62cb59753b418",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 237,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "status": "PASS",
+      "stimulus_sha256": "8eb459cdfe0796d95bf2eda3345624b607d13452da93f191e0b2253181d8d1b9",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 245,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "status": "PASS",
+      "stimulus_sha256": "c2fd01820ac14840744eb6fafc2ec60b99168155136c47ab850c057b2742ea8c",
+      "workload": "vector"
+    },
+    {
+      "cycles": 322,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "status": "PASS",
+      "stimulus_sha256": "da77d6de6a87ece48ecc0f24ca17bd8b71ea2c047e834e1c3667e0ec7dff918a",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10267,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "status": "PASS",
+      "stimulus_sha256": "9d1371d6bd7b2fd9225ab746550469151d5ec4d5d7a83a08e3df864c5f6d0396",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "status": "PASS",
+      "stimulus_sha256": "a43b6cf17b73023b680d854deb7ea53068ce696af9e6bf88727b37413b75727a",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 340,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "status": "PASS",
+      "stimulus_sha256": "2586c9edfe2ec903b929563f4a3da60fad78b6c9b9466108cef82cd2fe2da537",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 348,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "status": "PASS",
+      "stimulus_sha256": "2f8fa592c5276346daab58927f5b16a84b9260d14e4eaba1b687e87a1d83a1c0",
+      "workload": "vector"
+    },
+    {
+      "cycles": 226,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "status": "PASS",
+      "stimulus_sha256": "7aa2fb7f06f73b141697def53e0c9b9a6fb9aeb3b9f3d80866c320bbc39923f3",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10171,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "status": "PASS",
+      "stimulus_sha256": "599256e8aaa3ead9a14fcb58945c54dd5e56d81d5f82b1a884bf334e25cd3be3",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "status": "PASS",
+      "stimulus_sha256": "ed0d1cd2ba98a0bb640494c8df74b74e137964a028074f22b5ed2570a000da72",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 244,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "status": "PASS",
+      "stimulus_sha256": "44072b8cf4d14ef6995d7a01e649fa2c0b875b04eb96b8b6b4c5805017818180",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 252,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "status": "PASS",
+      "stimulus_sha256": "57daa1410e841621a990390615bbf71d4ed2a95562e75bd51a2ee8769ffdc7ff",
+      "workload": "vector"
+    },
+    {
+      "cycles": 254,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "status": "PASS",
+      "stimulus_sha256": "dc7d2fb1ccb53e1e0c009db58234f5ca49bf17c6d37da0152be6a8e4fbef17de",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10043,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "status": "PASS",
+      "stimulus_sha256": "01f5645a0348ea95778b2d2adac544a44f66b7c8e1acf8980ac754563f47e23f",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8395,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "status": "PASS",
+      "stimulus_sha256": "a55ed3826a2cdbe167f9c6d6a8358587200387d055ff845a3be62cb59753b418",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 237,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "status": "PASS",
+      "stimulus_sha256": "8eb459cdfe0796d95bf2eda3345624b607d13452da93f191e0b2253181d8d1b9",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 245,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "status": "PASS",
+      "stimulus_sha256": "c2fd01820ac14840744eb6fafc2ec60b99168155136c47ab850c057b2742ea8c",
+      "workload": "vector"
+    },
+    {
+      "cycles": 322,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "status": "PASS",
+      "stimulus_sha256": "da77d6de6a87ece48ecc0f24ca17bd8b71ea2c047e834e1c3667e0ec7dff918a",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10267,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "status": "PASS",
+      "stimulus_sha256": "9d1371d6bd7b2fd9225ab746550469151d5ec4d5d7a83a08e3df864c5f6d0396",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "status": "PASS",
+      "stimulus_sha256": "a43b6cf17b73023b680d854deb7ea53068ce696af9e6bf88727b37413b75727a",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 340,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "status": "PASS",
+      "stimulus_sha256": "2586c9edfe2ec903b929563f4a3da60fad78b6c9b9466108cef82cd2fe2da537",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 348,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "status": "PASS",
+      "stimulus_sha256": "2f8fa592c5276346daab58927f5b16a84b9260d14e4eaba1b687e87a1d83a1c0",
+      "workload": "vector"
+    },
+    {
+      "cycles": 226,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "status": "PASS",
+      "stimulus_sha256": "7aa2fb7f06f73b141697def53e0c9b9a6fb9aeb3b9f3d80866c320bbc39923f3",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10171,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "status": "PASS",
+      "stimulus_sha256": "599256e8aaa3ead9a14fcb58945c54dd5e56d81d5f82b1a884bf334e25cd3be3",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "status": "PASS",
+      "stimulus_sha256": "ed0d1cd2ba98a0bb640494c8df74b74e137964a028074f22b5ed2570a000da72",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 244,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "status": "PASS",
+      "stimulus_sha256": "44072b8cf4d14ef6995d7a01e649fa2c0b875b04eb96b8b6b4c5805017818180",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 252,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "status": "PASS",
+      "stimulus_sha256": "57daa1410e841621a990390615bbf71d4ed2a95562e75bd51a2ee8769ffdc7ff",
+      "workload": "vector"
+    },
+    {
+      "cycles": 210,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "status": "PASS",
+      "stimulus_sha256": "e5ec87116809210e0cc82c048190426c0ebc09a591bef9a792a5cb63692af69a",
+      "workload": "local_supply"
+    },
+    {
+      "cycles": 10155,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "status": "PASS",
+      "stimulus_sha256": "92e8992b1bd28941592cf144c8cda212e2c7e5f6917ba677f05ee248fa50e09e",
+      "workload": "hbm_limited"
+    },
+    {
+      "cycles": 8234,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "status": "PASS",
+      "stimulus_sha256": "4e48a93930ff3ea68d054a871ccea5a4873bae34bcdd0f7222451ed25e666a75",
+      "workload": "nic_limited"
+    },
+    {
+      "cycles": 228,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "status": "PASS",
+      "stimulus_sha256": "7414a13d500fa6be95e22511d0a83133aed5b5032828c66a8e49942ecb8ea640",
+      "workload": "embedding"
+    },
+    {
+      "cycles": 237,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "status": "PASS",
+      "stimulus_sha256": "21d428f90e976d58d394e9539416e0fa216d2dd37ae42b21f0d3a51bea2fc330",
+      "workload": "vector"
+    }
+  ],
+  "status": "PASS"
+}

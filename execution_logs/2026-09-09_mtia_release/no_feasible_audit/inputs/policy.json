@@ -1,0 +1,41 @@
+{
+  "constraints": {
+    "area_mm2": {
+      "max": 0
+    },
+    "steady_tmax_c": {
+      "max": 85
+    }
+  },
+  "cost_model_file": "mtia_costs_synthetic.json",
+  "max_candidates": 256,
+  "objectives": [
+    {
+      "direction": "min",
+      "metric": "latency_ms",
+      "scale": 0.001,
+      "weight": 1
+    },
+    {
+      "direction": "min",
+      "metric": "energy_mj",
+      "scale": 0.001,
+      "weight": 1
+    },
+    {
+      "direction": "min",
+      "metric": "area_mm2",
+      "scale": 0.01,
+      "weight": 1
+    }
+  ],
+  "quality_requirement": "allow_estimates",
+  "schema_version": 1,
+  "selection": "lexicographic",
+  "tie_breakers": [
+    {
+      "direction": "max",
+      "metric": "pitch_um"
+    }
+  ]
+}

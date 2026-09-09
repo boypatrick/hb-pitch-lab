@@ -1,0 +1,129 @@
+{
+  "bindings": [
+    {
+      "source": "link.WIDTH",
+      "target": "queue.WIDTH"
+    }
+  ],
+  "clock_hz": 250000000,
+  "connections": [
+    {
+      "source": "queue",
+      "target": "link"
+    }
+  ],
+  "costs": {
+    "background_bottom_w": 0.1,
+    "background_top_w": 0.1,
+    "compute_pj_op": 0.5,
+    "integer_data_width": 8,
+    "memory_pj_hb_byte": 2
+  },
+  "environment_file": "demo.json",
+  "evaluation_binding": {
+    "compute": [
+      "tensor"
+    ],
+    "hb_link": "link",
+    "sram": [
+      "scratch"
+    ]
+  },
+  "modules": [
+    {
+      "name": "tensor",
+      "parameters": {
+        "ACC_W": 32,
+        "COLS": 4,
+        "DATA_W": 8,
+        "ROWS": 4
+      },
+      "sweep": {
+        "ROWS": [
+          4,
+          8
+        ]
+      },
+      "tier": 0,
+      "type": "int_mac_array"
+    },
+    {
+      "name": "scratch",
+      "parameters": {
+        "BANKS": 4,
+        "DATA_W": 64,
+        "DEPTH": 32
+      },
+      "tier": 1,
+      "type": "banked_sram"
+    },
+    {
+      "name": "rf",
+      "parameters": {
+        "DATA_W": 32,
+        "DEPTH": 16,
+        "LANES": 4
+      },
+      "tier": 0,
+      "type": "register_file"
+    },
+    {
+      "name": "queue",
+      "parameters": {
+        "DEPTH": 4,
+        "WIDTH": 64
+      },
+      "tier": 1,
+      "type": "stream_fifo"
+    },
+    {
+      "name": "link",
+      "parameters": {
+        "STAGES": 2,
+        "WIDTH": 64
+      },
+      "sweep": {
+        "WIDTH": [
+          64,
+          128,
+          256
+        ]
+      },
+      "tier": 0,
+      "type": "hb_link"
+    },
+    {
+      "name": "arbiter",
+      "parameters": {
+        "PORTS": 4
+      },
+      "tier": 1,
+      "type": "rr_arbiter"
+    }
+  ],
+  "name": "parameterized_tile",
+  "physical": {
+    "pad_modes": [
+      "constant_fill"
+    ],
+    "pitch_um": [
+      8,
+      4,
+      2
+    ]
+  },
+  "physical_limits": {
+    "endpoint_max_bits_per_tile": 1024,
+    "fabric_cap_gbps": 128,
+    "routing_limit_bits_per_tile": 1024
+  },
+  "provenance": "Synthetic integer module benchmark for demonstrating evaluation-to-RTL consistency. Not GPU or foundry calibrated.",
+  "schema_version": 1,
+  "tile_count": 2,
+  "workload": {
+    "external_bytes": 10000,
+    "external_gbps": 32,
+    "hb_bytes": 100000,
+    "work_ops": 1000000
+  }
+}

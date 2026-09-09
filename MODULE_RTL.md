@@ -1,5 +1,7 @@
 # 評估參數 → 對應 RTL
 
+0.4 第一階段已另建接通 scratch→PE→shared memory→ME/NMC 的 descriptor 子系統，使用 `mtia_flow.py` 與 [MTIA_OPERATIONS.md](MTIA_OPERATIONS.md)。`mtia_*.sv` 有自己的 schema、ports、資源及成本 adapter，未冒用下列六類 benchmark 的型別或舊 assembly。以下 0.2/0.3 限制仍適用原有 `module_flow.py`。
+
 0.3 已增加自動選點、PPA 成本 adapter 與固定驗收，入口為 [OPERATIONS_MANUAL.md](OPERATIONS_MANUAL.md)。以下保留 0.2 的模組與基礎評估契約；新最佳化結果的有效指標請讀 `optimization_binding.json.effective_metrics`。
 
 這一版已建立六種可參數化 SystemVerilog 模組與可執行的匯出流程。評估器與 RTL wrapper 共用同一份已解析參數；不是由 LLM 在每次評估後重新猜一份 RTL。

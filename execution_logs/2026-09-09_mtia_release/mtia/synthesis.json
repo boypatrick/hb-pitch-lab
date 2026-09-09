@@ -1,0 +1,95 @@
+{
+  "cases": [
+    {
+      "generic_cells": 19032,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 23664,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29818,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 23664,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29818,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29592,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 23664,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29818,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29592,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    },
+    {
+      "generic_cells": 29192,
+      "memory_bits": 10240,
+      "multipliers": 16,
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "scope": "Generic synthesis with memories retained; no Liberty mapping, SRAM macro binding or physical timing.",
+      "status": "PASS",
+      "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)"
+    }
+  ],
+  "status": "PASS"
+}

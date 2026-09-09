@@ -1,0 +1,88 @@
+{
+  "architecture": "mtia-like-int8-v1",
+  "clock_hz": 1000000000,
+  "max_cycles": 100000,
+  "parameters": {
+    "lanes": 8,
+    "pes": 2,
+    "scratch_rows": 64,
+    "shared_entries": 64
+  },
+  "physical": {
+    "coarse_bits": 64,
+    "coarse_window_um2": 40000,
+    "link_stages": 1,
+    "local_widths_bits": [
+      16,
+      64,
+      128
+    ],
+    "local_window_um2": 4096,
+    "pitches_um": [
+      8,
+      4,
+      2
+    ],
+    "signal_fraction": 0.5
+  },
+  "provenance": "Research descriptor subsystem inspired by MTIA PE/local scratch and collective offload; no vendor RTL or calibrated silicon numbers.",
+  "schema_version": 1,
+  "trace_bin_cycles": 64,
+  "workloads": [
+    {
+      "hbm_gap_cycles": 1,
+      "kernel": "gemm",
+      "name": "local_supply",
+      "nic_gap_cycles": 1,
+      "output_stall_period": 7,
+      "outputs_per_pe": 4,
+      "phases": 1,
+      "seed": 17,
+      "vectors_per_output": 4
+    },
+    {
+      "hbm_gap_cycles": 256,
+      "kernel": "gemm",
+      "name": "hbm_limited",
+      "nic_gap_cycles": 1,
+      "output_stall_period": 7,
+      "outputs_per_pe": 4,
+      "phases": 1,
+      "seed": 17,
+      "vectors_per_output": 4
+    },
+    {
+      "hbm_gap_cycles": 1,
+      "kernel": "gemm",
+      "name": "nic_limited",
+      "nic_gap_cycles": 1024,
+      "output_stall_period": 7,
+      "outputs_per_pe": 4,
+      "phases": 1,
+      "seed": 17,
+      "vectors_per_output": 4
+    },
+    {
+      "hbm_gap_cycles": 1,
+      "kernel": "embedding",
+      "name": "embedding",
+      "nic_gap_cycles": 1,
+      "output_stall_period": 5,
+      "outputs_per_pe": 4,
+      "phases": 2,
+      "seed": 23,
+      "vectors_per_output": 2
+    },
+    {
+      "hbm_gap_cycles": 1,
+      "kernel": "vector",
+      "name": "vector",
+      "nic_gap_cycles": 3,
+      "output_stall_period": 3,
+      "outputs_per_pe": 4,
+      "phases": 2,
+      "seed": 29,
+      "vectors_per_output": 2
+    }
+  ]
+}

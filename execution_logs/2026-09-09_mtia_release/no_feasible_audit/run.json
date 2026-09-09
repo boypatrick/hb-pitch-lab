@@ -1,0 +1,88 @@
+{
+  "artifact_sha256": {
+    "QC_REPORT.md": "2df711e81e9cd085b8f7562c12ffb7049d8b6482939e9661cda6de68f28e63bf",
+    "events.jsonl": "5bcd3107ed501a45583fb36dfa0fdc861de5364f858d2ea69c865cafd2840a5f",
+    "inputs/costs.json": "ad6905d59b649cdae4550489dd9e2e1e82e5d40173805535c6fbd31b60c48031",
+    "inputs/design.json": "05abdb990a630dd5c90dc4c75a5ba390052d7f1f1272e91594002cd5cbfcdb28",
+    "inputs/policy.json": "3ff8a2396940c1a708e233073d6887c4d63041d0edf9bdcd7a1208bfa29d6857",
+    "search/COMPARISON.md": "b62765912595a2d42b879914c5144dbe5bdc10ffbf2fead86a434006ba4f7f8d",
+    "search/evaluation.json": "2856801f1534942b1aa3a62d603a2fb6638d6b6419f0d621c03b62283997f320",
+    "search/local_supply_program.json": "02a17cd3d9723664d49187304659189feea5a4041a8dd34117fe1eb4bdcf79af",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/local_supply.json": "45345b6dcce6e3a2d695e94729c8b328a07432cb9a0d21d0b994b6bbb7a1e536",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/clock.sdc": "7c151db5ecaa624a282504235c1298d153722f0230174d7ee1e03ac80998774f",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/files.f": "19ee370ce91f88e85627b78018ca98ba934c78a83dab52007665104ad67a444c",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/manifest.json": "590919ba6903a98db546ca11c89e602a1aececbc01a821c9cc3a10dec1305fce",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_cluster.sv": "7a8005a21bb17ff4398258e8f61091b632c739a2bd8927d972c65f5b4ab94d11",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_me_nmc.sv": "44bfe7f1fa64d69aea0c1d579d45dd5451fc1a9bc0d26e67aa5d9122f07f4171",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_pe.sv": "94e6db2806c1c60c12b38fbe0253a2d9ca9e9d0851d21da61a41bee6b662124f",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_scratch.sv": "fc17e82923deb0814de6e787cf6d99c9b58b38460447efa61467f2757c1c3dbf",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_selected_top.sv": "9faadb05f7989275155eb8a79316e8ac542888c3ac8280baf501adb73a65e7db",
+    "search/points/40390915730840bfbe2d1dd84ef40bf92d69f7518cc908d1a35b205fdcf40173/rtl/rtl/mtia_transport.sv": "d992ac3f8ee846d7705a5a3c327292daac55a9f1334839a5661111df4eb09f6b",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/local_supply.json": "6e6b48fac563548ddf5b22f3c1e9139944ab73efadab4c37a7384a385b06284c",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/clock.sdc": "7c151db5ecaa624a282504235c1298d153722f0230174d7ee1e03ac80998774f",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/files.f": "19ee370ce91f88e85627b78018ca98ba934c78a83dab52007665104ad67a444c",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/manifest.json": "b6982e60200debdf3c59f16151b6247ffea5444e50c42df8351c0f9985b9da36",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_cluster.sv": "7a8005a21bb17ff4398258e8f61091b632c739a2bd8927d972c65f5b4ab94d11",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_me_nmc.sv": "44bfe7f1fa64d69aea0c1d579d45dd5451fc1a9bc0d26e67aa5d9122f07f4171",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_pe.sv": "94e6db2806c1c60c12b38fbe0253a2d9ca9e9d0851d21da61a41bee6b662124f",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_scratch.sv": "fc17e82923deb0814de6e787cf6d99c9b58b38460447efa61467f2757c1c3dbf",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_selected_top.sv": "5706f7fda349b333dc9d302127186b21c7a64784dd3053309aa12875c078a2d0",
+    "search/points/50ed698c4a9f6e44f9d956bb7e88dffa94344e656dee15587375e498319b93ac/rtl/rtl/mtia_transport.sv": "d992ac3f8ee846d7705a5a3c327292daac55a9f1334839a5661111df4eb09f6b",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/local_supply.json": "624a1bcad6590de33d6157737208f829568b962888d5c7e36e306590190105ff",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/clock.sdc": "7c151db5ecaa624a282504235c1298d153722f0230174d7ee1e03ac80998774f",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/files.f": "19ee370ce91f88e85627b78018ca98ba934c78a83dab52007665104ad67a444c",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/manifest.json": "994ce750578a1b124575c2a26ab8917e7ea554e6b854c43f06eea0798be92ef5",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_cluster.sv": "7a8005a21bb17ff4398258e8f61091b632c739a2bd8927d972c65f5b4ab94d11",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_me_nmc.sv": "44bfe7f1fa64d69aea0c1d579d45dd5451fc1a9bc0d26e67aa5d9122f07f4171",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_pe.sv": "94e6db2806c1c60c12b38fbe0253a2d9ca9e9d0851d21da61a41bee6b662124f",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_scratch.sv": "fc17e82923deb0814de6e787cf6d99c9b58b38460447efa61467f2757c1c3dbf",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_selected_top.sv": "29957bca745cdf396de010e79bc0d6cc9121ce2c198a922df94a8b7b14380b1d",
+    "search/points/ff155375136dcddbf85bca28f08287cea251803bcf41a6338c1af0c67c06de2f/rtl/rtl/mtia_transport.sv": "d992ac3f8ee846d7705a5a3c327292daac55a9f1334839a5661111df4eb09f6b"
+  },
+  "checks": [
+    {
+      "id": "M01",
+      "name": "input_and_provenance",
+      "status": "PASS"
+    },
+    {
+      "detail": "No feasible nondominated selection; constraints unchanged",
+      "id": "M02",
+      "name": "execution_and_exhaustive_search",
+      "status": "FAIL"
+    },
+    {
+      "id": "M03",
+      "name": "all_feasible_rtl_cycle_replay",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04",
+      "name": "all_feasible_generic_synthesis",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M05",
+      "name": "deterministic_replay_and_controls",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M06",
+      "name": "source_and_artifact_binding",
+      "status": "NOT_RUN"
+    }
+  ],
+  "ended_utc": "2026-09-09T15:01:43.157263+00:00",
+  "error": "No feasible nondominated selection; constraints unchanged",
+  "format": "mtia-qc-v1",
+  "run_id": "20260909T150143Z-9efa0dc3d563",
+  "runtime_versions": {
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "scipy": "1.13.1"
+  },
+  "selected_point_id": null,
+  "source_sha256": "d72b40db8a069ec3a0ae23e2438c5c543aa0daaa2764a7a5da81dabb8c3782ef",
+  "started_utc": "2026-09-09T15:01:43.113051+00:00",
+  "status": "FAIL"
+}

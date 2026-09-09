@@ -1,0 +1,3149 @@
+{
+  "candidates": [
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 128,
+        "partition": "2d",
+        "pitch_um": 0,
+        "required_sites": 0,
+        "sites": 0
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.004448,
+        "bottom_power_w": 0.0,
+        "energy_mj": 0.00034557339999999987,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0,
+        "heat_balance_error_w": 6.938893903907228e-18,
+        "latency_ms": 0.018575,
+        "nodal_residual_w": 3.469446951953614e-18,
+        "pitch_um": 0,
+        "power_w": 0.0186042207267833,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.38967351648352,
+        "throughput_tops": 0.00013695827725437415,
+        "timing_wns_ns": null,
+        "top_power_w": 0.01860422072678331
+      },
+      "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+      "reasons": [],
+      "score": 6.455124466666667,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "0c85047c25fb4809dabeca441f46456d786c6c08935d00a86286a4270002a987",
+          "counts": {
+            "hbm_bytes": 256,
+            "me_busy_cycles": 66,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 82,
+            "pe_me_concurrent_busy_cycles": 48,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 103,
+          "execution_sha256": "afd0db5bd9ed39330a3c2a081f16c4655a87181b9e757408c347eec608fc75c5",
+          "metrics": {
+            "area_mm2": 0.004448,
+            "bottom_power_w": 0.0,
+            "energy_mj": 3.917272e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.000103,
+            "nodal_residual_w": 0.0,
+            "pitch_um": 0,
+            "power_w": 0.03803176699029126,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.334303268608416,
+            "throughput_tops": 0.005281553398058253,
+            "timing_wns_ns": null,
+            "top_power_w": 0.03803176699029126
+          },
+          "stalls": {
+            "local_result_wait": 34,
+            "output_backpressure": 1,
+            "writeback_backpressure": 2
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "8586687baff53a359dee6aaccfd83fa3406310b42630eea9bbb033df6758c566",
+          "counts": {
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 49,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 73,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10036,
+          "execution_sha256": "bac3678c6b9f55d6484e40993a863cd6ea9c930dd00c6e4568e8bfead6247ac7",
+          "metrics": {
+            "area_mm2": 0.004448,
+            "bottom_power_w": 0.0,
+            "energy_mj": 0.00018311606399999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.010036,
+            "nodal_residual_w": 1.734723475976807e-18,
+            "pitch_um": 0,
+            "power_w": 0.01824592108409725,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.16722547229972,
+            "throughput_tops": 5.261060183339976e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01824592108409725
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 33,
+            "writeback_backpressure": 1
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "6a5b62eca7bc10ca8d9bc4a468a06778c0f3032e990449992b827783240f92cc",
+          "counts": {
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 49,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 73,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 91,
+          "execution_sha256": "8367aada0930e25c320416dcf3e57de81f2d3af6145aa6e12afebe46e8fdb726",
+          "metrics": {
+            "area_mm2": 0.004448,
+            "bottom_power_w": 0.0,
+            "energy_mj": 3.867383999999999e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 9.099999999999999e-05,
+            "nodal_residual_w": 3.469446951953614e-18,
+            "pitch_um": 0,
+            "power_w": 0.04249872527472527,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.38967351648352,
+            "throughput_tops": 0.005802197802197802,
+            "timing_wns_ns": null,
+            "top_power_w": 0.04249872527472527
+          },
+          "stalls": {
+            "local_result_wait": 33,
+            "writeback_backpressure": 1
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "c51460e6ae4a9e6ff8ac76c6f5bd0e9954c1dea6b165092d7d9221decaf68467",
+          "counts": {
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 73,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "25a741f56333ea6de6a2276f9b2128ec99fcbde50856d278a54436c38c898ad4",
+          "metrics": {
+            "area_mm2": 0.004448,
+            "bottom_power_w": 0.0,
+            "energy_mj": 0.00015063681599999994,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 1.734723475976807e-18,
+            "pitch_um": 0,
+            "power_w": 0.018294488219577357,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.167670932717996,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01829448821957736
+          },
+          "stalls": {
+            "local_result_wait": 9,
+            "nic_wait": 8167,
+            "writeback_backpressure": 1
+          }
+        },
+        "vector": {
+          "cost_sha256": "facba00808b99e2836400c9a2fa713e2d984423ff9993e36ac682c5cf4213190",
+          "counts": {
+            "hbm_bytes": 256,
+            "me_busy_cycles": 74,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 82,
+            "pe_me_concurrent_busy_cycles": 48,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 111,
+          "execution_sha256": "514ced1de977fe34a42be49b993530dba55f1ecb0a829bf4bcd820628aec45d7",
+          "metrics": {
+            "area_mm2": 0.004448,
+            "bottom_power_w": 0.0,
+            "energy_mj": 4.0358640000000005e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000111,
+            "nodal_residual_w": 3.469446951953614e-18,
+            "pitch_um": 0,
+            "power_w": 0.03635913513513513,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.31985666666667,
+            "throughput_tops": 0.003747747747747748,
+            "timing_wns_ns": null,
+            "top_power_w": 0.03635913513513513
+          },
+          "stalls": {
+            "local_result_wait": 34,
+            "nic_wait": 8,
+            "output_backpressure": 1,
+            "writeback_backpressure": 2
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 64,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "required_sites": 192,
+        "sites": 312
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005187,
+        "bottom_power_w": 0.0015568019296964641,
+        "energy_mj": 0.00036780754599999993,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.024576,
+        "heat_balance_error_w": 1.0408340855860843e-17,
+        "latency_ms": 0.019174,
+        "nodal_residual_w": 1.508396272470458e-17,
+        "pitch_um": 8,
+        "power_w": 0.019182619484718888,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.24622775688689,
+        "throughput_tops": 0.00013267967038698238,
+        "timing_wns_ns": null,
+        "top_power_w": 0.017625817555022426
+      },
+      "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+      "reasons": [],
+      "score": 6.686835848666667,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "c2e9e39e80bf4297ae43ffa6ac353d594125636efcb18de7a58e0dca78b97308",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 72,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 237,
+          "execution_sha256": "6f7bd8500139e40939cca52b64a625209ae7abfdd4b997fc0f93d9ec1c79f4ed",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003754662869198313,
+            "energy_mj": 6.952323000000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.024576,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000237,
+            "nodal_residual_w": 1.1167282376600696e-17,
+            "pitch_um": 8,
+            "power_w": 0.029334696202531648,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24189469857234,
+            "throughput_tops": 0.0022953586497890294,
+            "timing_wns_ns": null,
+            "top_power_w": 0.02558003333333334
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "output_backpressure": 1
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "4987f1287f47a88b714d76d96698d612d5ce8fd78567ccfcd13db8ca489686b3",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10043,
+          "execution_sha256": "f0c747ac853a4c2b9117973cb4aa31220f078c73b6a0f159e9c1dde06b6a619b",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.001474996405456537,
+            "energy_mj": 0.00018837499699999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.024576,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.010043,
+            "nodal_residual_w": 1.508396272470458e-17,
+            "pitch_um": 8,
+            "power_w": 0.018756845265358955,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1658694092881,
+            "throughput_tops": 5.257393209200438e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01728184885990242
+          },
+          "stalls": {
+            "dma_drain_wait": 4,
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9949,
+            "local_result_wait": 36
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "c0eb306ff46bd1230e16589b63d507a3edc8f9d8c7db9527d980eacc5df6cce3",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 254,
+          "execution_sha256": "7658a35b8ae89b3c017f87b57c6a97aff8baf8f14d35a5df2147ae9db7d9ac6a",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0031204889763779527,
+            "energy_mj": 7.484065999999999e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.024576,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.00025400000000000005,
+            "nodal_residual_w": 1.1384122811097797e-17,
+            "pitch_um": 8,
+            "power_w": 0.029464826771653536,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24622775688689,
+            "throughput_tops": 0.0020787401574803147,
+            "timing_wns_ns": null,
+            "top_power_w": 0.026344337795275584
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 36
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "cb5305713b788630bc5164f95c85aa46a954344c03e6f228f460c166233cb897",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8395,
+          "execution_sha256": "affc8569ac01a04427f29fe6854491fd202f2d605ef43b6fa59d6044322995d8",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0014833780226325192,
+            "energy_mj": 0.00015792160499999996,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.024576,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.008395,
+            "nodal_residual_w": 7.209944447028604e-18,
+            "pitch_um": 8,
+            "power_w": 0.01881138832638475,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.16627872921963,
+            "throughput_tops": 6.289458010720667e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017328010303752233
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 12,
+            "nic_wait": 8164,
+            "output_backpressure": 1
+          }
+        },
+        "vector": {
+          "cost_sha256": "a46ca018d8aa4ee6fa624e715349abd161543c60b4eb68416cff67d37c20d85a",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 80,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 245,
+          "execution_sha256": "1b02ba3cbd661f955a5cca69e557685afb643ab0069cf04b20bedbba2946b6a1",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003678830612244898,
+            "energy_mj": 7.074555e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.024576,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000245,
+            "nodal_residual_w": 6.938893903907228e-18,
+            "pitch_um": 8,
+            "power_w": 0.028875734693877553,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.238353901566015,
+            "throughput_tops": 0.0016979591836734696,
+            "timing_wns_ns": null,
+            "top_power_w": 0.025196904081632655
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "nic_wait": 8,
+            "output_backpressure": 1
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 16,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "required_sites": 32,
+        "sites": 32
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005142,
+        "bottom_power_w": 0.002713222828148224,
+        "energy_mj": 0.0003696779172,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.008192,
+        "heat_balance_error_w": 6.938893903907228e-18,
+        "latency_ms": 0.019511,
+        "nodal_residual_w": 1.1709383462843448e-17,
+        "pitch_um": 8,
+        "power_w": 0.01894715376966839,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.25575199956202,
+        "throughput_tops": 0.00013038798626415868,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016233930941520168
+      },
+      "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+      "reasons": [],
+      "score": 6.798292639066666,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "37db32f7708117950f0bac03a9f25091592422728e076111556f93526d323c23",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 304,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 340,
+          "execution_sha256": "2a747a4f689275c77ab54e0b39a68cd26e20e22154e885ac8b5e6ab5535c39c9",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008676364705882355,
+            "energy_mj": 8.795768000000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.008192,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.00033999999999999997,
+            "nodal_residual_w": 6.5052130349130266e-18,
+            "pitch_um": 8,
+            "power_w": 0.02586990588235295,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24267910455608,
+            "throughput_tops": 0.0016000000000000003,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01719354117647059
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "operand_wait": 448
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "9a965cb41c890f582184da17432ac5f66c06fd5100a592b266724e70488e258a",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10267,
+          "execution_sha256": "570f8e426b0cc310bbd2dbcbf949364339ceb7f2396a9ea474e4449f865d5b72",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002360592987240674,
+            "energy_mj": 0.00019024880840000003,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.008192,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.010267,
+            "nodal_residual_w": 7.589415207398531e-18,
+            "pitch_um": 8,
+            "power_w": 0.018530126463426513,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.167265469008555,
+            "throughput_tops": 5.142690172397e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016169533476185837
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "44077648ebc0a510f36a5ce1d83690e592976afd803217837b5027ef80552387",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 322,
+          "execution_sha256": "dbbeec725fdbc3afbaeab2149ef8eb303cb4999b28bb787abb5edb973a705ee4",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.00903155652173913,
+            "energy_mj": 8.601394400000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.008192,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.000322,
+            "nodal_residual_w": 1.1709383462843448e-17,
+            "pitch_um": 8,
+            "power_w": 0.026712404968944104,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.25575199956202,
+            "throughput_tops": 0.0016397515527950312,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017680848447204973
+          },
+          "stalls": {
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "d909f8ce205fe208fa164de50bac77e46ef9fc42b05eae6d223b4a5c688874be",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "3a3e38540a5eff1bfd26a4f2ae4add055e737b371a3b3ab5f6c56ff052d21f04",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002413922322079184,
+            "energy_mj": 0.00015311565679999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.008192,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 8,
+            "power_w": 0.018595537624483845,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1679728522512,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016181615302404664
+          },
+          "stalls": {
+            "local_result_wait": 72,
+            "nic_wait": 8104,
+            "operand_wait": 448
+          }
+        },
+        "vector": {
+          "cost_sha256": "77cd9abd1865402b18dd504391a04bc139f0a36c18695274990380b2f3c896aa",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 312,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 348,
+          "execution_sha256": "73c9d95eddab7f2b7c438f10fe7d3580411bece9ef8108d9359bcaeb362ad8ab",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008526209195402302,
+            "energy_mj": 8.9162896e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.008192,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000348,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 8,
+            "power_w": 0.02562152183908046,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24018749295709,
+            "throughput_tops": 0.0011954022988505746,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01709531264367816
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "nic_wait": 8,
+            "operand_wait": 448
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": false,
+        "hb_bits": 64,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "required_sites": 80,
+        "sites": 32
+      },
+      "eligible": false,
+      "metrics": null,
+      "point_id": "4f6d11e984a11000cab5af72a75eeb5ac0350ebe0cc336a2c4e198a49e05f3ff",
+      "reasons": [
+        "hb_capacity"
+      ],
+      "workloads": {}
+    },
+    {
+      "candidate": {
+        "geometric_feasible": false,
+        "hb_bits": 128,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "required_sites": 144,
+        "sites": 32
+      },
+      "eligible": false,
+      "metrics": null,
+      "point_id": "fa506ada9c2770aa9790fcb202a74254861b3f0af431c5fb2c279dbe07739ce8",
+      "reasons": [
+        "hb_capacity"
+      ],
+      "workloads": {}
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 64,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "required_sites": 192,
+        "sites": 1250
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005187,
+        "bottom_power_w": 0.0015568019296964641,
+        "energy_mj": 0.00036780754599999993,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.006144,
+        "heat_balance_error_w": 1.0408340855860843e-17,
+        "latency_ms": 0.019174,
+        "nodal_residual_w": 1.508396272470458e-17,
+        "pitch_um": 4,
+        "power_w": 0.019182619484718888,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.24622775688689,
+        "throughput_tops": 0.00013267967038698238,
+        "timing_wns_ns": null,
+        "top_power_w": 0.017625817555022426
+      },
+      "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+      "reasons": [],
+      "score": 6.686835848666667,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "7e902bd3701c54c3af48d9e18493a072940d7067ebc884da5af99e8f2b95f5d0",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 72,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 237,
+          "execution_sha256": "6f7bd8500139e40939cca52b64a625209ae7abfdd4b997fc0f93d9ec1c79f4ed",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003754662869198313,
+            "energy_mj": 6.952323000000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.006144,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000237,
+            "nodal_residual_w": 1.1167282376600696e-17,
+            "pitch_um": 4,
+            "power_w": 0.029334696202531648,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24189469857234,
+            "throughput_tops": 0.0022953586497890294,
+            "timing_wns_ns": null,
+            "top_power_w": 0.02558003333333334
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "output_backpressure": 1
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "92d1341d9a4c207183c7a4c8c83d62401af089bcecf9f6dd7e90ae9647297101",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10043,
+          "execution_sha256": "f0c747ac853a4c2b9117973cb4aa31220f078c73b6a0f159e9c1dde06b6a619b",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.001474996405456537,
+            "energy_mj": 0.00018837499699999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.006144,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.010043,
+            "nodal_residual_w": 1.508396272470458e-17,
+            "pitch_um": 4,
+            "power_w": 0.018756845265358955,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1658694092881,
+            "throughput_tops": 5.257393209200438e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01728184885990242
+          },
+          "stalls": {
+            "dma_drain_wait": 4,
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9949,
+            "local_result_wait": 36
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "1bd5e11d331af598b1f58f8b7fea01df5e3be34311fb8c41f50fe08bf988ac90",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 254,
+          "execution_sha256": "7658a35b8ae89b3c017f87b57c6a97aff8baf8f14d35a5df2147ae9db7d9ac6a",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0031204889763779527,
+            "energy_mj": 7.484065999999999e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.006144,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.00025400000000000005,
+            "nodal_residual_w": 1.1384122811097797e-17,
+            "pitch_um": 4,
+            "power_w": 0.029464826771653536,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24622775688689,
+            "throughput_tops": 0.0020787401574803147,
+            "timing_wns_ns": null,
+            "top_power_w": 0.026344337795275584
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 36
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "f1a78514a67a54f827950ee3ac36049f8715e8cc0c0c21937c5bda33e7548422",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8395,
+          "execution_sha256": "affc8569ac01a04427f29fe6854491fd202f2d605ef43b6fa59d6044322995d8",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0014833780226325192,
+            "energy_mj": 0.00015792160499999996,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.006144,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.008395,
+            "nodal_residual_w": 7.209944447028604e-18,
+            "pitch_um": 4,
+            "power_w": 0.01881138832638475,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.16627872921963,
+            "throughput_tops": 6.289458010720667e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017328010303752233
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 12,
+            "nic_wait": 8164,
+            "output_backpressure": 1
+          }
+        },
+        "vector": {
+          "cost_sha256": "590c0ded642367d9da4463f7864882c54b17aa75671b7cf6c28e5753de818cd0",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 80,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 245,
+          "execution_sha256": "1b02ba3cbd661f955a5cca69e557685afb643ab0069cf04b20bedbba2946b6a1",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003678830612244898,
+            "energy_mj": 7.074555e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.006144,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000245,
+            "nodal_residual_w": 6.938893903907228e-18,
+            "pitch_um": 4,
+            "power_w": 0.028875734693877553,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.238353901566015,
+            "throughput_tops": 0.0016979591836734696,
+            "timing_wns_ns": null,
+            "top_power_w": 0.025196904081632655
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "nic_wait": 8,
+            "output_backpressure": 1
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 16,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "required_sites": 32,
+        "sites": 128
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005142,
+        "bottom_power_w": 0.002713222828148224,
+        "energy_mj": 0.0003696779172,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002048,
+        "heat_balance_error_w": 6.938893903907228e-18,
+        "latency_ms": 0.019511,
+        "nodal_residual_w": 1.1709383462843448e-17,
+        "pitch_um": 4,
+        "power_w": 0.01894715376966839,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.25575199956202,
+        "throughput_tops": 0.00013038798626415868,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016233930941520168
+      },
+      "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+      "reasons": [],
+      "score": 6.798292639066666,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "2c97b4e55198d19c969d92c727f9d392a2ea945f1a49d0a78137c09681ec3992",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 304,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 340,
+          "execution_sha256": "2a747a4f689275c77ab54e0b39a68cd26e20e22154e885ac8b5e6ab5535c39c9",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008676364705882355,
+            "energy_mj": 8.795768000000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002048,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.00033999999999999997,
+            "nodal_residual_w": 6.5052130349130266e-18,
+            "pitch_um": 4,
+            "power_w": 0.02586990588235295,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24267910455608,
+            "throughput_tops": 0.0016000000000000003,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01719354117647059
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "operand_wait": 448
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "932dc9668d9c1353b88d0dc03ac10b5efca65dcaf2c6d3317e1ed5c0a045efdc",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10267,
+          "execution_sha256": "570f8e426b0cc310bbd2dbcbf949364339ceb7f2396a9ea474e4449f865d5b72",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002360592987240674,
+            "energy_mj": 0.00019024880840000003,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002048,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.010267,
+            "nodal_residual_w": 7.589415207398531e-18,
+            "pitch_um": 4,
+            "power_w": 0.018530126463426513,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.167265469008555,
+            "throughput_tops": 5.142690172397e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016169533476185837
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "55912675a534f44244e8aab00199f54de48c624a3b59c2bb8bd1831e112cd374",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 322,
+          "execution_sha256": "dbbeec725fdbc3afbaeab2149ef8eb303cb4999b28bb787abb5edb973a705ee4",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.00903155652173913,
+            "energy_mj": 8.601394400000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002048,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.000322,
+            "nodal_residual_w": 1.1709383462843448e-17,
+            "pitch_um": 4,
+            "power_w": 0.026712404968944104,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.25575199956202,
+            "throughput_tops": 0.0016397515527950312,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017680848447204973
+          },
+          "stalls": {
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "b1e41ca7752e04e49620a2eb5f334ef044b92e08e4f14f94e5fdc96a62caf529",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "3a3e38540a5eff1bfd26a4f2ae4add055e737b371a3b3ab5f6c56ff052d21f04",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002413922322079184,
+            "energy_mj": 0.00015311565679999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002048,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 4,
+            "power_w": 0.018595537624483845,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1679728522512,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016181615302404664
+          },
+          "stalls": {
+            "local_result_wait": 72,
+            "nic_wait": 8104,
+            "operand_wait": 448
+          }
+        },
+        "vector": {
+          "cost_sha256": "c5d08ae1554a7ecbd318c06ce5475398c928e679113137192ec8023648ea7af8",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 312,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 348,
+          "execution_sha256": "73c9d95eddab7f2b7c438f10fe7d3580411bece9ef8108d9359bcaeb362ad8ab",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008526209195402302,
+            "energy_mj": 8.9162896e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002048,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000348,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 4,
+            "power_w": 0.02562152183908046,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24018749295709,
+            "throughput_tops": 0.0011954022988505746,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01709531264367816
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "nic_wait": 8,
+            "operand_wait": 448
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 64,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "required_sites": 80,
+        "sites": 128
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005333999999999999,
+        "bottom_power_w": 0.0028206386887645735,
+        "energy_mj": 0.00036633646440000005,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.0051199999999999996,
+        "heat_balance_error_w": 1.3877787807814457e-17,
+        "latency_ms": 0.019127,
+        "nodal_residual_w": 1.9081958235744878e-17,
+        "pitch_um": 4,
+        "power_w": 0.019152844899879753,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.296594987024754,
+        "throughput_tops": 0.00013300569875045746,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016332206211115172
+      },
+      "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+      "reasons": [],
+      "score": 6.675578821466668,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "f79816fc8ef62e8f92d252e97990ff4092a1913971e67cbb05bf08dfda0ba3a3",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 208,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 336,
+            "pe_me_concurrent_busy_cycles": 168,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 244,
+          "execution_sha256": "345ca717fdfa9eb11f4ea6e1c0d236167d7647e7b23176074618d99588b3a242",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.011342239344262296,
+            "energy_mj": 7.089156800000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0051199999999999996,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.00024400000000000002,
+            "nodal_residual_w": 7.806255641895632e-18,
+            "pitch_um": 4,
+            "power_w": 0.02905392131147541,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.27551605299062,
+            "throughput_tops": 0.0022295081967213114,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017711681967213115
+          },
+          "stalls": {
+            "local_result_wait": 176,
+            "operand_wait": 256
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "d00396d4542f262a1c30021e0cd59ffb37a61b8d4ff94c41439c474ed0cd5880",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 184,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10171,
+          "execution_sha256": "a6f6e1982fede5e84da0d7abeab30699dd44cddca1ee66f35e510992c7db7324",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.002458631658637302,
+            "energy_mj": 0.00019044818120000004,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0051199999999999996,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.010171,
+            "nodal_residual_w": 1.1167282376600696e-17,
+            "pitch_um": 4,
+            "power_w": 0.018724626998328584,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.169331298157495,
+            "throughput_tops": 5.191229967554813e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01626599533969128
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 168,
+            "operand_wait": 256
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "09e5efc9a564e47319bbe9120b77cefd64c4b6aea621dab62c1c427c7cdc3653",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 184,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 226,
+          "execution_sha256": "1173e1cb14f196c4fd2e440329bd2ef13313886369af3943bf2aaae5788e8099",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.012052989380530973,
+            "energy_mj": 6.8913272e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0051199999999999996,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.00022600000000000002,
+            "nodal_residual_w": 6.938893903907228e-18,
+            "pitch_um": 4,
+            "power_w": 0.030492598230088496,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.296594987024754,
+            "throughput_tops": 0.0023362831858407076,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01843960884955752
+          },
+          "stalls": {
+            "local_result_wait": 168,
+            "operand_wait": 256
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "4349fecd2ee1a9276be17153dc3468ed54146528f5517c5bbd3c9d5df1502940",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "4e3e8c06e9a0a9ed00b6b1f3c3c0eddb7f190502c573c26f40dc331250c0e9cc",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.002509922322079184,
+            "energy_mj": 0.00015469658479999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0051199999999999996,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 1.214306433183765e-17,
+            "pitch_um": 4,
+            "power_w": 0.018787537624483843,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.170011639585574,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016277615302404663
+          },
+          "stalls": {
+            "local_result_wait": 48,
+            "nic_wait": 8128,
+            "operand_wait": 256
+          }
+        },
+        "vector": {
+          "cost_sha256": "73855db801cf47a37ce4a0d3c46a60629f3c9eeccc3d39b2c3ee710c93228cb7",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 216,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 336,
+            "pe_me_concurrent_busy_cycles": 168,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 252,
+          "execution_sha256": "ffa7176ca2ff658331427960ef6f29fabad22374ad3db86dde5d5e4fdef8701b",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.011053298412698417,
+            "energy_mj": 7.211214400000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0051199999999999996,
+            "heat_balance_error_w": 1.3877787807814457e-17,
+            "latency_ms": 0.000252,
+            "nodal_residual_w": 1.9081958235744878e-17,
+            "pitch_um": 4,
+            "power_w": 0.028615930158730166,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.27109753662058,
+            "throughput_tops": 0.001650793650793651,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01756263174603175
+          },
+          "stalls": {
+            "local_result_wait": 176,
+            "nic_wait": 8,
+            "operand_wait": 256
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": false,
+        "hb_bits": 128,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "required_sites": 144,
+        "sites": 128
+      },
+      "eligible": false,
+      "metrics": null,
+      "point_id": "b10ca454ce4b5047db5b0b1d4790a69a2bd8732a03d618c814f307c9e8c5ad93",
+      "reasons": [
+        "hb_capacity"
+      ],
+      "workloads": {}
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 64,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "required_sites": 192,
+        "sites": 5000
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005187,
+        "bottom_power_w": 0.0015568019296964641,
+        "energy_mj": 0.00036780754599999993,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.001536,
+        "heat_balance_error_w": 1.0408340855860843e-17,
+        "latency_ms": 0.019174,
+        "nodal_residual_w": 1.508396272470458e-17,
+        "pitch_um": 2,
+        "power_w": 0.019182619484718888,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.24622775688689,
+        "throughput_tops": 0.00013267967038698238,
+        "timing_wns_ns": null,
+        "top_power_w": 0.017625817555022426
+      },
+      "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+      "reasons": [],
+      "score": 6.686835848666667,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "7717ea6ffcf3ac467b9fd8734a4bf03ebf1625224a3798e65949b7e17ddac47e",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 72,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 237,
+          "execution_sha256": "6f7bd8500139e40939cca52b64a625209ae7abfdd4b997fc0f93d9ec1c79f4ed",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003754662869198313,
+            "energy_mj": 6.952323000000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.001536,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000237,
+            "nodal_residual_w": 1.1167282376600696e-17,
+            "pitch_um": 2,
+            "power_w": 0.029334696202531648,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24189469857234,
+            "throughput_tops": 0.0022953586497890294,
+            "timing_wns_ns": null,
+            "top_power_w": 0.02558003333333334
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "output_backpressure": 1
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "640f17bc04160ffa0bdf2cb566883315ffebbe70bc0cc2d97edb0441695811ec",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10043,
+          "execution_sha256": "f0c747ac853a4c2b9117973cb4aa31220f078c73b6a0f159e9c1dde06b6a619b",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.001474996405456537,
+            "energy_mj": 0.00018837499699999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.001536,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.010043,
+            "nodal_residual_w": 1.508396272470458e-17,
+            "pitch_um": 2,
+            "power_w": 0.018756845265358955,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1658694092881,
+            "throughput_tops": 5.257393209200438e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01728184885990242
+          },
+          "stalls": {
+            "dma_drain_wait": 4,
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9949,
+            "local_result_wait": 36
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "fa68c024642e56d9d17ef6f3c38ba3ed246c87a09c3f82c7170c5c380a59fec3",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 52,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 3,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 254,
+          "execution_sha256": "7658a35b8ae89b3c017f87b57c6a97aff8baf8f14d35a5df2147ae9db7d9ac6a",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0031204889763779527,
+            "energy_mj": 7.484065999999999e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.001536,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.00025400000000000005,
+            "nodal_residual_w": 1.1384122811097797e-17,
+            "pitch_um": 2,
+            "power_w": 0.029464826771653536,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24622775688689,
+            "throughput_tops": 0.0020787401574803147,
+            "timing_wns_ns": null,
+            "top_power_w": 0.026344337795275584
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 36
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "0beb57c20d73c8c20417341d00d4f00c2dfe75ff2f6a8de93106be50a1448867",
+          "counts": {
+            "hb_bits": 5632,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 72,
+            "pe_me_concurrent_busy_cycles": 36,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8395,
+          "execution_sha256": "affc8569ac01a04427f29fe6854491fd202f2d605ef43b6fa59d6044322995d8",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.0014833780226325192,
+            "energy_mj": 0.00015792160499999996,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.001536,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.008395,
+            "nodal_residual_w": 7.209944447028604e-18,
+            "pitch_um": 2,
+            "power_w": 0.01881138832638475,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.16627872921963,
+            "throughput_tops": 6.289458010720667e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017328010303752233
+          },
+          "stalls": {
+            "dma_backpressure": 156,
+            "dma_drain_wait": 4,
+            "load_phase_wait": 160,
+            "local_result_wait": 12,
+            "nic_wait": 8164,
+            "output_backpressure": 1
+          }
+        },
+        "vector": {
+          "cost_sha256": "72bef455fd23c65beccf9b761a92febf74776536cc8109eba5eee1d5a6d04cb4",
+          "counts": {
+            "hb_bits": 5120,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 80,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 80,
+            "pe_me_concurrent_busy_cycles": 40,
+            "pe_nmc_compute_same_cycle": 6,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 245,
+          "execution_sha256": "1b02ba3cbd661f955a5cca69e557685afb643ab0069cf04b20bedbba2946b6a1",
+          "metrics": {
+            "area_mm2": 0.005187,
+            "bottom_power_w": 0.003678830612244898,
+            "energy_mj": 7.074555e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.001536,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000245,
+            "nodal_residual_w": 6.938893903907228e-18,
+            "pitch_um": 2,
+            "power_w": 0.028875734693877553,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.238353901566015,
+            "throughput_tops": 0.0016979591836734696,
+            "timing_wns_ns": null,
+            "top_power_w": 0.025196904081632655
+          },
+          "stalls": {
+            "dma_backpressure": 120,
+            "dma_drain_wait": 8,
+            "load_phase_wait": 128,
+            "local_result_wait": 40,
+            "nic_wait": 8,
+            "output_backpressure": 1
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 16,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "required_sites": 32,
+        "sites": 512
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005142,
+        "bottom_power_w": 0.002713222828148224,
+        "energy_mj": 0.0003696779172,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.000512,
+        "heat_balance_error_w": 6.938893903907228e-18,
+        "latency_ms": 0.019511,
+        "nodal_residual_w": 1.1709383462843448e-17,
+        "pitch_um": 2,
+        "power_w": 0.01894715376966839,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.25575199956202,
+        "throughput_tops": 0.00013038798626415868,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016233930941520168
+      },
+      "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+      "reasons": [],
+      "score": 6.798292639066666,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "61087d71cbf718d28f075c9aef1feb74cfb937eeaee01473c36d9be4b57e3c2d",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 304,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 340,
+          "execution_sha256": "2a747a4f689275c77ab54e0b39a68cd26e20e22154e885ac8b5e6ab5535c39c9",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008676364705882355,
+            "energy_mj": 8.795768000000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.000512,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.00033999999999999997,
+            "nodal_residual_w": 6.5052130349130266e-18,
+            "pitch_um": 2,
+            "power_w": 0.02586990588235295,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24267910455608,
+            "throughput_tops": 0.0016000000000000003,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01719354117647059
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "operand_wait": 448
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "a21b84b2795e9ffe2cd34663cadff457a9fd353bd98189996f20813aaad3aa79",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10267,
+          "execution_sha256": "570f8e426b0cc310bbd2dbcbf949364339ceb7f2396a9ea474e4449f865d5b72",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002360592987240674,
+            "energy_mj": 0.00019024880840000003,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.000512,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.010267,
+            "nodal_residual_w": 7.589415207398531e-18,
+            "pitch_um": 2,
+            "power_w": 0.018530126463426513,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.167265469008555,
+            "throughput_tops": 5.142690172397e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016169533476185837
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "e63f3db354d415f44acc088303141d99cc7f40047c62135253bee86e2ac405f0",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 280,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 322,
+          "execution_sha256": "dbbeec725fdbc3afbaeab2149ef8eb303cb4999b28bb787abb5edb973a705ee4",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.00903155652173913,
+            "energy_mj": 8.601394400000002e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.000512,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.000322,
+            "nodal_residual_w": 1.1709383462843448e-17,
+            "pitch_um": 2,
+            "power_w": 0.026712404968944104,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.25575199956202,
+            "throughput_tops": 0.0016397515527950312,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017680848447204973
+          },
+          "stalls": {
+            "local_result_wait": 264,
+            "operand_wait": 448
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "d361803dc9195ba498898201af339db72a20bc8a1bf6bf6c4b23931d139dde15",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 520,
+            "pe_me_concurrent_busy_cycles": 260,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "3a3e38540a5eff1bfd26a4f2ae4add055e737b371a3b3ab5f6c56ff052d21f04",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.002413922322079184,
+            "energy_mj": 0.00015311565679999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.000512,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 2,
+            "power_w": 0.018595537624483845,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.1679728522512,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016181615302404664
+          },
+          "stalls": {
+            "local_result_wait": 72,
+            "nic_wait": 8104,
+            "operand_wait": 448
+          }
+        },
+        "vector": {
+          "cost_sha256": "47d9c36b221bde55db2580d44fb25c8b2d1fe3fe23db815eabe6ef2cdff04e4f",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 312,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 528,
+            "pe_me_concurrent_busy_cycles": 264,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 348,
+          "execution_sha256": "73c9d95eddab7f2b7c438f10fe7d3580411bece9ef8108d9359bcaeb362ad8ab",
+          "metrics": {
+            "area_mm2": 0.005142,
+            "bottom_power_w": 0.008526209195402302,
+            "energy_mj": 8.9162896e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.000512,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000348,
+            "nodal_residual_w": 5.204170427930421e-18,
+            "pitch_um": 2,
+            "power_w": 0.02562152183908046,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.24018749295709,
+            "throughput_tops": 0.0011954022988505746,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01709531264367816
+          },
+          "stalls": {
+            "local_result_wait": 272,
+            "nic_wait": 8,
+            "operand_wait": 448
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 64,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "required_sites": 80,
+        "sites": 512
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.005333999999999999,
+        "bottom_power_w": 0.0028206386887645735,
+        "energy_mj": 0.00036633646440000005,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.0012799999999999999,
+        "heat_balance_error_w": 1.3877787807814457e-17,
+        "latency_ms": 0.019127,
+        "nodal_residual_w": 1.9081958235744878e-17,
+        "pitch_um": 2,
+        "power_w": 0.019152844899879753,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.296594987024754,
+        "throughput_tops": 0.00013300569875045746,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016332206211115172
+      },
+      "point_id": "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+      "reasons": [],
+      "score": 6.675578821466668,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "51fda89313770e716e7938620f37f497da5476973e168424714721385dad4a65",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 208,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 336,
+            "pe_me_concurrent_busy_cycles": 168,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 244,
+          "execution_sha256": "345ca717fdfa9eb11f4ea6e1c0d236167d7647e7b23176074618d99588b3a242",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.011342239344262296,
+            "energy_mj": 7.089156800000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0012799999999999999,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.00024400000000000002,
+            "nodal_residual_w": 7.806255641895632e-18,
+            "pitch_um": 2,
+            "power_w": 0.02905392131147541,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.27551605299062,
+            "throughput_tops": 0.0022295081967213114,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017711681967213115
+          },
+          "stalls": {
+            "local_result_wait": 176,
+            "operand_wait": 256
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "1139ad8b375c299060571d096032167df271a57806faccaba6707edb7049bcd1",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 184,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10171,
+          "execution_sha256": "a6f6e1982fede5e84da0d7abeab30699dd44cddca1ee66f35e510992c7db7324",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.002458631658637302,
+            "energy_mj": 0.00019044818120000004,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0012799999999999999,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.010171,
+            "nodal_residual_w": 1.1167282376600696e-17,
+            "pitch_um": 2,
+            "power_w": 0.018724626998328584,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.169331298157495,
+            "throughput_tops": 5.191229967554813e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01626599533969128
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 168,
+            "operand_wait": 256
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "ee6c8800c81be24b1d271d6696844827a71068c4f3da6c96b8ac087fd8ce1b6a",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 184,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 226,
+          "execution_sha256": "1173e1cb14f196c4fd2e440329bd2ef13313886369af3943bf2aaae5788e8099",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.012052989380530973,
+            "energy_mj": 6.8913272e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0012799999999999999,
+            "heat_balance_error_w": 3.469446951953614e-18,
+            "latency_ms": 0.00022600000000000002,
+            "nodal_residual_w": 6.938893903907228e-18,
+            "pitch_um": 2,
+            "power_w": 0.030492598230088496,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.296594987024754,
+            "throughput_tops": 0.0023362831858407076,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01843960884955752
+          },
+          "stalls": {
+            "local_result_wait": 168,
+            "operand_wait": 256
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "10a3fa34d42cef563495e0fe05f08ce5579b3b5220f380838b0f9fdb75a4455a",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 328,
+            "pe_me_concurrent_busy_cycles": 164,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "4e3e8c06e9a0a9ed00b6b1f3c3c0eddb7f190502c573c26f40dc331250c0e9cc",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.002509922322079184,
+            "energy_mj": 0.00015469658479999997,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0012799999999999999,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 1.214306433183765e-17,
+            "pitch_um": 2,
+            "power_w": 0.018787537624483843,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.170011639585574,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016277615302404663
+          },
+          "stalls": {
+            "local_result_wait": 48,
+            "nic_wait": 8128,
+            "operand_wait": 256
+          }
+        },
+        "vector": {
+          "cost_sha256": "8c8f8b52f1a36ab1c640a5f76b7fd6a4838195923a02aa180cd6156c51082c5a",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 216,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 336,
+            "pe_me_concurrent_busy_cycles": 168,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 252,
+          "execution_sha256": "ffa7176ca2ff658331427960ef6f29fabad22374ad3db86dde5d5e4fdef8701b",
+          "metrics": {
+            "area_mm2": 0.005333999999999999,
+            "bottom_power_w": 0.011053298412698417,
+            "energy_mj": 7.211214400000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.0012799999999999999,
+            "heat_balance_error_w": 1.3877787807814457e-17,
+            "latency_ms": 0.000252,
+            "nodal_residual_w": 1.9081958235744878e-17,
+            "pitch_um": 2,
+            "power_w": 0.028615930158730166,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.27109753662058,
+            "throughput_tops": 0.001650793650793651,
+            "timing_wns_ns": null,
+            "top_power_w": 0.01756263174603175
+          },
+          "stalls": {
+            "local_result_wait": 176,
+            "nic_wait": 8,
+            "operand_wait": 256
+          }
+        }
+      }
+    },
+    {
+      "candidate": {
+        "geometric_feasible": true,
+        "hb_bits": 128,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "required_sites": 144,
+        "sites": 512
+      },
+      "eligible": true,
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.002950555518254301,
+        "energy_mj": 0.00037005404479999995,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 1.3877787807814457e-17,
+        "latency_ms": 0.019064,
+        "nodal_residual_w": 1.3877787807814457e-17,
+        "pitch_um": 2,
+        "power_w": 0.01941114376835921,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.30922999905896,
+        "throughput_tops": 0.00013344523709609736,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016460588250104907
+      },
+      "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+      "reasons": [],
+      "score": 6.664351348266667,
+      "workloads": {
+        "embedding": {
+          "cost_sha256": "3a4b81caaf6c90774b0265e8e4ac932c57274570eb82e044d231eeb0218c4936",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 192,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 304,
+            "pe_me_concurrent_busy_cycles": 152,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 512
+          },
+          "cycles": 228,
+          "execution_sha256": "fdbce4d87e875e3b7fe7c0ecaf533527f3175a117ffcf55f6c097332488156cd",
+          "metrics": {
+            "area_mm2": 0.0055899999999999995,
+            "bottom_power_w": 0.012108950877192985,
+            "energy_mj": 6.852209600000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002304,
+            "heat_balance_error_w": 6.938893903907228e-18,
+            "latency_ms": 0.000228,
+            "nodal_residual_w": 8.673617379884035e-18,
+            "pitch_um": 2,
+            "power_w": 0.030053550877192987,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.28588894982685,
+            "throughput_tops": 0.0023859649122807015,
+            "timing_wns_ns": null,
+            "top_power_w": 0.0179446
+          },
+          "stalls": {
+            "local_result_wait": 160,
+            "operand_wait": 224
+          }
+        },
+        "hbm_limited": {
+          "cost_sha256": "a165f7e62fec0f79a3225880685fd2820e24820b05da48dac0201c6088a91777",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 168,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 296,
+            "pe_me_concurrent_busy_cycles": 148,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 10155,
+          "execution_sha256": "30e7b9bc1e05ab1a42314a94525d4e7d000b4c94a10aa9e0562527a7e56ab08b",
+          "metrics": {
+            "area_mm2": 0.0055899999999999995,
+            "bottom_power_w": 0.0025869751846381095,
+            "energy_mj": 0.000192752546,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002304,
+            "heat_balance_error_w": 0.0,
+            "latency_ms": 0.010155,
+            "nodal_residual_w": 9.974659986866641e-18,
+            "pitch_um": 2,
+            "power_w": 0.018981048350566222,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.17205423794668,
+            "throughput_tops": 5.199409158050221e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016394073165928114
+          },
+          "stalls": {
+            "hbm_source_wait": 9945,
+            "load_phase_wait": 9945,
+            "local_result_wait": 152,
+            "operand_wait": 224
+          }
+        },
+        "local_supply": {
+          "cost_sha256": "1c004c4d8479d1da4ac5aa150c013694db6583d23f04470a6fe7cc261f8822df",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 168,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 296,
+            "pe_me_concurrent_busy_cycles": 148,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 210,
+          "execution_sha256": "2336d174ee21c3b9116202ab2f8ed8da10fbe79164cb7c93563aaecccd46d045",
+          "metrics": {
+            "area_mm2": 0.0055899999999999995,
+            "bottom_power_w": 0.0129286,
+            "energy_mj": 6.649772000000001e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002304,
+            "heat_balance_error_w": 1.3877787807814457e-17,
+            "latency_ms": 0.00021,
+            "nodal_residual_w": 1.3010426069826053e-17,
+            "pitch_um": 2,
+            "power_w": 0.03166558095238096,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.30922999905896,
+            "throughput_tops": 0.002514285714285714,
+            "timing_wns_ns": null,
+            "top_power_w": 0.018736980952380956
+          },
+          "stalls": {
+            "local_result_wait": 152,
+            "operand_wait": 224
+          }
+        },
+        "nic_limited": {
+          "cost_sha256": "6e94310e1759c7de149cd05f33aa5a4a0757842dc9edf877c5b558e019f99432",
+          "counts": {
+            "hb_bits": 4928,
+            "hbm_bytes": 320,
+            "mac_ops": 512,
+            "me_busy_cycles": 8192,
+            "nic_bytes": 32,
+            "nmc_add_ops": 16,
+            "pe_busy_cycles": 296,
+            "pe_me_concurrent_busy_cycles": 148,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 320,
+            "shared_read_bytes": 32,
+            "shared_write_bytes": 32
+          },
+          "cycles": 8234,
+          "execution_sha256": "11eff7fd07f40c6e47795befa4f1031003e9bfed320a973094d82203bbbfeb12",
+          "metrics": {
+            "area_mm2": 0.0055899999999999995,
+            "bottom_power_w": 0.0026379223220791836,
+            "energy_mj": 0.00015680448879999993,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002304,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.008234,
+            "nodal_residual_w": 1.0408340855860843e-17,
+            "pitch_um": 2,
+            "power_w": 0.019043537624483842,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.17273002269808,
+            "throughput_tops": 6.412436239980569e-05,
+            "timing_wns_ns": null,
+            "top_power_w": 0.016405615302404662
+          },
+          "stalls": {
+            "local_result_wait": 44,
+            "nic_wait": 8132,
+            "operand_wait": 224
+          }
+        },
+        "vector": {
+          "cost_sha256": "87a995cdf25ba22860551e5226ee3dc18dde27b05d4616cc1d691ad04cce3cbd",
+          "counts": {
+            "hb_bits": 5248,
+            "hbm_bytes": 256,
+            "me_busy_cycles": 200,
+            "nic_bytes": 64,
+            "nmc_add_ops": 32,
+            "pe_busy_cycles": 304,
+            "pe_me_concurrent_busy_cycles": 152,
+            "pe_nmc_compute_same_cycle": 0,
+            "scratch_read_bytes": 512,
+            "scratch_write_bytes": 256,
+            "shared_read_bytes": 64,
+            "shared_write_bytes": 64,
+            "vector_ops": 384
+          },
+          "cycles": 237,
+          "execution_sha256": "cfc0107aff282e15c64955a0c452ee16e4f40682c61c870d5a19e1e79b74603d",
+          "metrics": {
+            "area_mm2": 0.0055899999999999995,
+            "bottom_power_w": 0.011739064135021099,
+            "energy_mj": 6.9950284e-06,
+            "fifo_bytes_per_tile": 0,
+            "hb_site_budget_mm2": 0.002304,
+            "heat_balance_error_w": 1.0408340855860843e-17,
+            "latency_ms": 0.000237,
+            "nodal_residual_w": 1.3877787807814457e-17,
+            "pitch_um": 2,
+            "power_w": 0.029514887763713082,
+            "rf_bytes_per_tile": 0,
+            "sram_bytes_per_tile": 512,
+            "steady_tmax_c": 40.28043986303644,
+            "throughput_tops": 0.0017552742616033757,
+            "timing_wns_ns": null,
+            "top_power_w": 0.017775823628691984
+          },
+          "stalls": {
+            "local_result_wait": 160,
+            "nic_wait": 8,
+            "operand_wait": 224,
+            "output_backpressure": 1
+          }
+        }
+      }
+    }
+  ],
+  "comparison": {
+    "baseline_2d": "Ideal direct same-die wires (zero transport latency); no planar routing extraction.",
+    "fixed_width_controls": [
+      {
+        "cycles": 322,
+        "pitches_um": [
+          2,
+          4,
+          8
+        ],
+        "status": "PASS",
+        "width_bits": 16,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 226,
+        "pitches_um": [
+          2,
+          4
+        ],
+        "status": "PASS",
+        "width_bits": 64,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 10267,
+        "pitches_um": [
+          2,
+          4,
+          8
+        ],
+        "status": "PASS",
+        "width_bits": 16,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10171,
+        "pitches_um": [
+          2,
+          4
+        ],
+        "status": "PASS",
+        "width_bits": 64,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 8234,
+        "pitches_um": [
+          2,
+          4,
+          8
+        ],
+        "status": "PASS",
+        "width_bits": 16,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8234,
+        "pitches_um": [
+          2,
+          4
+        ],
+        "status": "PASS",
+        "width_bits": 64,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 340,
+        "pitches_um": [
+          2,
+          4,
+          8
+        ],
+        "status": "PASS",
+        "width_bits": 16,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 244,
+        "pitches_um": [
+          2,
+          4
+        ],
+        "status": "PASS",
+        "width_bits": 64,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 348,
+        "pitches_um": [
+          2,
+          4,
+          8
+        ],
+        "status": "PASS",
+        "width_bits": 16,
+        "workload": "vector"
+      },
+      {
+        "cycles": 252,
+        "pitches_um": [
+          2,
+          4
+        ],
+        "status": "PASS",
+        "width_bits": 64,
+        "workload": "vector"
+      }
+    ],
+    "reoptimized_width": [
+      {
+        "cycles": 91,
+        "partition": "2d",
+        "pitch_um": 0,
+        "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+        "width_bits": 128,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 254,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+        "width_bits": 64,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 254,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+        "width_bits": 64,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 254,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+        "width_bits": 64,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 322,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+        "width_bits": 16,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 226,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+        "width_bits": 64,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 210,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+        "width_bits": 128,
+        "workload": "local_supply"
+      },
+      {
+        "cycles": 10036,
+        "partition": "2d",
+        "pitch_um": 0,
+        "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+        "width_bits": 128,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10043,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+        "width_bits": 64,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10043,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+        "width_bits": 64,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10043,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+        "width_bits": 64,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10267,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+        "width_bits": 16,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10171,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+        "width_bits": 64,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 10155,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+        "width_bits": 128,
+        "workload": "hbm_limited"
+      },
+      {
+        "cycles": 8234,
+        "partition": "2d",
+        "pitch_um": 0,
+        "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+        "width_bits": 128,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8395,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+        "width_bits": 64,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8395,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+        "width_bits": 64,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8395,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+        "width_bits": 64,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8234,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+        "width_bits": 16,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8234,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "point_id": "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+        "width_bits": 16,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 8234,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "point_id": "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2",
+        "width_bits": 16,
+        "workload": "nic_limited"
+      },
+      {
+        "cycles": 103,
+        "partition": "2d",
+        "pitch_um": 0,
+        "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+        "width_bits": 128,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 237,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+        "width_bits": 64,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 237,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+        "width_bits": 64,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 237,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+        "width_bits": 64,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 340,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+        "width_bits": 16,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 244,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+        "width_bits": 64,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 228,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+        "width_bits": 128,
+        "workload": "embedding"
+      },
+      {
+        "cycles": 111,
+        "partition": "2d",
+        "pitch_um": 0,
+        "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+        "width_bits": 128,
+        "workload": "vector"
+      },
+      {
+        "cycles": 245,
+        "partition": "coarse",
+        "pitch_um": 8,
+        "point_id": "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+        "width_bits": 64,
+        "workload": "vector"
+      },
+      {
+        "cycles": 245,
+        "partition": "coarse",
+        "pitch_um": 4,
+        "point_id": "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+        "width_bits": 64,
+        "workload": "vector"
+      },
+      {
+        "cycles": 245,
+        "partition": "coarse",
+        "pitch_um": 2,
+        "point_id": "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+        "width_bits": 64,
+        "workload": "vector"
+      },
+      {
+        "cycles": 348,
+        "partition": "local_scratch",
+        "pitch_um": 8,
+        "point_id": "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+        "width_bits": 16,
+        "workload": "vector"
+      },
+      {
+        "cycles": 252,
+        "partition": "local_scratch",
+        "pitch_um": 4,
+        "point_id": "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+        "width_bits": 64,
+        "workload": "vector"
+      },
+      {
+        "cycles": 237,
+        "partition": "local_scratch",
+        "pitch_um": 2,
+        "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+        "width_bits": 128,
+        "workload": "vector"
+      }
+    ],
+    "selection": "minimum cycles among geometrically feasible widths; not the PPA policy selection"
+  },
+  "costs": {
+    "action_pj": {
+      "hb_bits": 0.1,
+      "mac_ops": 0.5,
+      "nmc_add_ops": 0.2,
+      "scratch_read_bytes": 2,
+      "scratch_write_bytes": 2.5,
+      "shared_read_bytes": 2,
+      "shared_write_bytes": 2.5,
+      "vector_ops": 0.2
+    },
+    "area_um2": {
+      "mac_lane": 100,
+      "me_control": 300,
+      "pe_control": 250,
+      "scratch_bit": 0.2,
+      "shared_bit": 0.2,
+      "transport_lane": 2,
+      "transport_state_bit": 0.5
+    },
+    "idle_w": {
+      "me_control": 0.001,
+      "pe_lane": 0.001,
+      "scratch_bit": 1e-07,
+      "shared_bit": 1e-07,
+      "transport_lane": 2e-06,
+      "transport_state_bit": 1e-07
+    },
+    "provenance": "Explicit demonstration coefficients, not MTIA/MI300 data; SRAM assumes logical 2R1W byte banks. No node scaling or timing closure.",
+    "quality": "synthetic",
+    "schema_version": 1,
+    "thermal": {
+      "ambient_c": 40,
+      "lateral_g_w_k": 0.01,
+      "quality": "synthetic",
+      "sink_g_w_k": 0.05,
+      "vertical_g_w_k": 0.2
+    }
+  },
+  "design": {
+    "architecture": "mtia-like-int8-v1",
+    "clock_hz": 1000000000,
+    "max_cycles": 100000,
+    "parameters": {
+      "lanes": 8,
+      "pes": 2,
+      "scratch_rows": 64,
+      "shared_entries": 64
+    },
+    "physical": {
+      "coarse_bits": 64,
+      "coarse_window_um2": 40000,
+      "link_stages": 1,
+      "local_widths_bits": [
+        16,
+        64,
+        128
+      ],
+      "local_window_um2": 4096,
+      "pitches_um": [
+        8,
+        4,
+        2
+      ],
+      "signal_fraction": 0.5
+    },
+    "provenance": "Research descriptor subsystem inspired by MTIA PE/local scratch and collective offload; no vendor RTL or calibrated silicon numbers.",
+    "schema_version": 1,
+    "trace_bin_cycles": 64,
+    "workloads": [
+      {
+        "hbm_gap_cycles": 1,
+        "kernel": "gemm",
+        "name": "local_supply",
+        "nic_gap_cycles": 1,
+        "output_stall_period": 7,
+        "outputs_per_pe": 4,
+        "phases": 1,
+        "seed": 17,
+        "vectors_per_output": 4
+      },
+      {
+        "hbm_gap_cycles": 256,
+        "kernel": "gemm",
+        "name": "hbm_limited",
+        "nic_gap_cycles": 1,
+        "output_stall_period": 7,
+        "outputs_per_pe": 4,
+        "phases": 1,
+        "seed": 17,
+        "vectors_per_output": 4
+      },
+      {
+        "hbm_gap_cycles": 1,
+        "kernel": "gemm",
+        "name": "nic_limited",
+        "nic_gap_cycles": 1024,
+        "output_stall_period": 7,
+        "outputs_per_pe": 4,
+        "phases": 1,
+        "seed": 17,
+        "vectors_per_output": 4
+      },
+      {
+        "hbm_gap_cycles": 1,
+        "kernel": "embedding",
+        "name": "embedding",
+        "nic_gap_cycles": 1,
+        "output_stall_period": 5,
+        "outputs_per_pe": 4,
+        "phases": 2,
+        "seed": 23,
+        "vectors_per_output": 2
+      },
+      {
+        "hbm_gap_cycles": 1,
+        "kernel": "vector",
+        "name": "vector",
+        "nic_gap_cycles": 3,
+        "output_stall_period": 3,
+        "outputs_per_pe": 4,
+        "phases": 2,
+        "seed": 29,
+        "vectors_per_output": 2
+      }
+    ]
+  },
+  "eligible_count": 10,
+  "engine_sha256": "bc86db7240b9c95f522a1f2fdfea025102936574df11d5f1c8ebe1c04fbf68a4",
+  "format": "mtia-evaluation-v1",
+  "geometric_feasible_count": 10,
+  "pareto_ids": [
+    "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80"
+  ],
+  "policy": {
+    "constraints": {
+      "area_mm2": {
+        "max": 0.1
+      },
+      "steady_tmax_c": {
+        "max": 85
+      }
+    },
+    "cost_model_file": "mtia_costs_synthetic.json",
+    "max_candidates": 256,
+    "objectives": [
+      {
+        "direction": "min",
+        "metric": "latency_ms",
+        "scale": 0.001,
+        "weight": 1
+      },
+      {
+        "direction": "min",
+        "metric": "energy_mj",
+        "scale": 0.001,
+        "weight": 1
+      },
+      {
+        "direction": "min",
+        "metric": "area_mm2",
+        "scale": 0.01,
+        "weight": 1
+      }
+    ],
+    "quality_requirement": "allow_estimates",
+    "schema_version": 1,
+    "selection": "lexicographic",
+    "tie_breakers": [
+      {
+        "direction": "max",
+        "metric": "pitch_um"
+      }
+    ]
+  },
+  "ranked_ids": [
+    "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+    "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53",
+    "86e77b4dcfc450f2a3ea951e2b9a27831f103ecca60087b53735e244befa3d71",
+    "ccfe14d4cce8045fcebf6b16b95cde0435a9093f612eead01d4803fbaa50dd95",
+    "50c686311930002ced21c18f5075f5d44414ea0ed1ab722a39f7605145cf3cdd",
+    "d84e3bd29e85a19a40f543ac478eaa067f163c185cc509795d47e27cfdbbfe11",
+    "1a497c8557a313ddd47857f85747696f417d59e24eb076b9039e1fd9ab669af8",
+    "5266bf9d8846d9eb252aa176c50f5d0d1d848b5508d52e13f66369cd28e838bc",
+    "7ee8e94ce86af863b6e8d9eebbae80365c52b7702d82d16eb39869b6fb624c77",
+    "677ddd4d049f756291ad4eeaab2d2d4f2d827ebd046766552343e0b2c21b95a2"
+  ],
+  "raw_grid_count": 13,
+  "scope": "Suite latency/energy are summed; power is energy/time; Tmax is max of per-workload steady cell means. Uncalibrated.",
+  "selected_point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80"
+}

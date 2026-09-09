@@ -1,0 +1,239 @@
+{
+  "effective_metrics": {
+    "area_mm2": 0.0055899999999999995,
+    "bottom_power_w": 0.002950555518254301,
+    "energy_mj": 0.00037005404479999995,
+    "fifo_bytes_per_tile": 0,
+    "hb_site_budget_mm2": 0.002304,
+    "heat_balance_error_w": 1.3877787807814457e-17,
+    "latency_ms": 0.019064,
+    "nodal_residual_w": 1.3877787807814457e-17,
+    "pitch_um": 2,
+    "power_w": 0.01941114376835921,
+    "rf_bytes_per_tile": 0,
+    "sram_bytes_per_tile": 512,
+    "steady_tmax_c": 40.30922999905896,
+    "throughput_tops": 0.00013344523709609736,
+    "timing_wns_ns": null,
+    "top_power_w": 0.016460588250104907
+  },
+  "evaluation_sha256": "c5920f52fa03d05905c0804f7ef7ee75de261e9d233b0db3b897a93ca8c07471",
+  "per_workload": {
+    "embedding": {
+      "cost_sha256": "3a4b81caaf6c90774b0265e8e4ac932c57274570eb82e044d231eeb0218c4936",
+      "counts": {
+        "hb_bits": 5248,
+        "hbm_bytes": 256,
+        "me_busy_cycles": 192,
+        "nic_bytes": 64,
+        "nmc_add_ops": 32,
+        "pe_busy_cycles": 304,
+        "pe_me_concurrent_busy_cycles": 152,
+        "pe_nmc_compute_same_cycle": 0,
+        "scratch_read_bytes": 512,
+        "scratch_write_bytes": 256,
+        "shared_read_bytes": 64,
+        "shared_write_bytes": 64,
+        "vector_ops": 512
+      },
+      "cycles": 228,
+      "execution_sha256": "fdbce4d87e875e3b7fe7c0ecaf533527f3175a117ffcf55f6c097332488156cd",
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.012108950877192985,
+        "energy_mj": 6.852209600000001e-06,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 6.938893903907228e-18,
+        "latency_ms": 0.000228,
+        "nodal_residual_w": 8.673617379884035e-18,
+        "pitch_um": 2,
+        "power_w": 0.030053550877192987,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.28588894982685,
+        "throughput_tops": 0.0023859649122807015,
+        "timing_wns_ns": null,
+        "top_power_w": 0.0179446
+      },
+      "stalls": {
+        "local_result_wait": 160,
+        "operand_wait": 224
+      }
+    },
+    "hbm_limited": {
+      "cost_sha256": "a165f7e62fec0f79a3225880685fd2820e24820b05da48dac0201c6088a91777",
+      "counts": {
+        "hb_bits": 4928,
+        "hbm_bytes": 320,
+        "mac_ops": 512,
+        "me_busy_cycles": 168,
+        "nic_bytes": 32,
+        "nmc_add_ops": 16,
+        "pe_busy_cycles": 296,
+        "pe_me_concurrent_busy_cycles": 148,
+        "pe_nmc_compute_same_cycle": 0,
+        "scratch_read_bytes": 512,
+        "scratch_write_bytes": 320,
+        "shared_read_bytes": 32,
+        "shared_write_bytes": 32
+      },
+      "cycles": 10155,
+      "execution_sha256": "30e7b9bc1e05ab1a42314a94525d4e7d000b4c94a10aa9e0562527a7e56ab08b",
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.0025869751846381095,
+        "energy_mj": 0.000192752546,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 0.0,
+        "latency_ms": 0.010155,
+        "nodal_residual_w": 9.974659986866641e-18,
+        "pitch_um": 2,
+        "power_w": 0.018981048350566222,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.17205423794668,
+        "throughput_tops": 5.199409158050221e-05,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016394073165928114
+      },
+      "stalls": {
+        "hbm_source_wait": 9945,
+        "load_phase_wait": 9945,
+        "local_result_wait": 152,
+        "operand_wait": 224
+      }
+    },
+    "local_supply": {
+      "cost_sha256": "1c004c4d8479d1da4ac5aa150c013694db6583d23f04470a6fe7cc261f8822df",
+      "counts": {
+        "hb_bits": 4928,
+        "hbm_bytes": 320,
+        "mac_ops": 512,
+        "me_busy_cycles": 168,
+        "nic_bytes": 32,
+        "nmc_add_ops": 16,
+        "pe_busy_cycles": 296,
+        "pe_me_concurrent_busy_cycles": 148,
+        "pe_nmc_compute_same_cycle": 0,
+        "scratch_read_bytes": 512,
+        "scratch_write_bytes": 320,
+        "shared_read_bytes": 32,
+        "shared_write_bytes": 32
+      },
+      "cycles": 210,
+      "execution_sha256": "2336d174ee21c3b9116202ab2f8ed8da10fbe79164cb7c93563aaecccd46d045",
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.0129286,
+        "energy_mj": 6.649772000000001e-06,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 1.3877787807814457e-17,
+        "latency_ms": 0.00021,
+        "nodal_residual_w": 1.3010426069826053e-17,
+        "pitch_um": 2,
+        "power_w": 0.03166558095238096,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.30922999905896,
+        "throughput_tops": 0.002514285714285714,
+        "timing_wns_ns": null,
+        "top_power_w": 0.018736980952380956
+      },
+      "stalls": {
+        "local_result_wait": 152,
+        "operand_wait": 224
+      }
+    },
+    "nic_limited": {
+      "cost_sha256": "6e94310e1759c7de149cd05f33aa5a4a0757842dc9edf877c5b558e019f99432",
+      "counts": {
+        "hb_bits": 4928,
+        "hbm_bytes": 320,
+        "mac_ops": 512,
+        "me_busy_cycles": 8192,
+        "nic_bytes": 32,
+        "nmc_add_ops": 16,
+        "pe_busy_cycles": 296,
+        "pe_me_concurrent_busy_cycles": 148,
+        "pe_nmc_compute_same_cycle": 0,
+        "scratch_read_bytes": 512,
+        "scratch_write_bytes": 320,
+        "shared_read_bytes": 32,
+        "shared_write_bytes": 32
+      },
+      "cycles": 8234,
+      "execution_sha256": "11eff7fd07f40c6e47795befa4f1031003e9bfed320a973094d82203bbbfeb12",
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.0026379223220791836,
+        "energy_mj": 0.00015680448879999993,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 1.0408340855860843e-17,
+        "latency_ms": 0.008234,
+        "nodal_residual_w": 1.0408340855860843e-17,
+        "pitch_um": 2,
+        "power_w": 0.019043537624483842,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.17273002269808,
+        "throughput_tops": 6.412436239980569e-05,
+        "timing_wns_ns": null,
+        "top_power_w": 0.016405615302404662
+      },
+      "stalls": {
+        "local_result_wait": 44,
+        "nic_wait": 8132,
+        "operand_wait": 224
+      }
+    },
+    "vector": {
+      "cost_sha256": "87a995cdf25ba22860551e5226ee3dc18dde27b05d4616cc1d691ad04cce3cbd",
+      "counts": {
+        "hb_bits": 5248,
+        "hbm_bytes": 256,
+        "me_busy_cycles": 200,
+        "nic_bytes": 64,
+        "nmc_add_ops": 32,
+        "pe_busy_cycles": 304,
+        "pe_me_concurrent_busy_cycles": 152,
+        "pe_nmc_compute_same_cycle": 0,
+        "scratch_read_bytes": 512,
+        "scratch_write_bytes": 256,
+        "shared_read_bytes": 64,
+        "shared_write_bytes": 64,
+        "vector_ops": 384
+      },
+      "cycles": 237,
+      "execution_sha256": "cfc0107aff282e15c64955a0c452ee16e4f40682c61c870d5a19e1e79b74603d",
+      "metrics": {
+        "area_mm2": 0.0055899999999999995,
+        "bottom_power_w": 0.011739064135021099,
+        "energy_mj": 6.9950284e-06,
+        "fifo_bytes_per_tile": 0,
+        "hb_site_budget_mm2": 0.002304,
+        "heat_balance_error_w": 1.0408340855860843e-17,
+        "latency_ms": 0.000237,
+        "nodal_residual_w": 1.3877787807814457e-17,
+        "pitch_um": 2,
+        "power_w": 0.029514887763713082,
+        "rf_bytes_per_tile": 0,
+        "sram_bytes_per_tile": 512,
+        "steady_tmax_c": 40.28043986303644,
+        "throughput_tops": 0.0017552742616033757,
+        "timing_wns_ns": null,
+        "top_power_w": 0.017775823628691984
+      },
+      "stalls": {
+        "local_result_wait": 160,
+        "nic_wait": 8,
+        "operand_wait": 224,
+        "output_backpressure": 1
+      }
+    }
+  },
+  "point_id": "ead2debf458c42874a1a969f2e90089726a69eaa34a094e9c4eba76cb7dd7d53"
+}

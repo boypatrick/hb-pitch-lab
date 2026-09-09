@@ -1,0 +1,57 @@
+{
+  "architecture": "mtia-like-int8-v1",
+  "checks": [
+    {
+      "id": "R01",
+      "scope": "Documented subsystem features and explicit omissions; not full MTIA coverage",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "R02",
+      "scope": "Executed supported integer kernels vs independent scalar oracle",
+      "status": "PASS"
+    },
+    {
+      "id": "R03",
+      "scope": "Every feasible candidate/workload vs exported RTL cycle replay; not silicon timing",
+      "status": "PASS"
+    },
+    {
+      "id": "R04",
+      "scope": "No independent foundry PPA holdout data",
+      "status": "NOT_CALIBRATED"
+    },
+    {
+      "id": "R05",
+      "scope": "Synthetic cell thermal network; no physical calibration",
+      "status": "NOT_CALIBRATED"
+    },
+    {
+      "id": "R06",
+      "scope": "Fixed-width controls and external-bottleneck experiments; no calibrated uncertainty model",
+      "status": "PARTIAL"
+    }
+  ],
+  "features": {
+    "dot_product": "mtia_pe: signed INT8 vector dot, wrapping INT32 accumulator",
+    "local_writeback": "result transport and round-robin arbiter feed shared SRAM",
+    "message_engine_nmc": "mtia_me_nmc: occupied-bit dependency, local+NIC reduction, concurrent with PEs",
+    "partition_controls": "2D direct wires; coarse DMA/results; local requests/operands/results",
+    "scratch_dma": "mtia_scratch: synchronous 2R1W byte banks; cluster DMA loader",
+    "vector_sfu_subset": "mtia_pe: add_sum and relu_sum only"
+  },
+  "omissions": [
+    "RISC-V ISA/firmware",
+    "FP8/BF16/MX precision",
+    "full SFU/softmax",
+    "full PE mesh/NoC",
+    "bank-conflict model for other port organizations",
+    "RDMA/NIC protocol and network topology",
+    "foundry SRAM/Liberty/HB RC",
+    "package/HBM/NIC power",
+    "APR/STA/FEM calibration"
+  ],
+  "reference": "https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/",
+  "reference_date": "2026-08-24",
+  "representation_status": "EXPLORATORY"
+}

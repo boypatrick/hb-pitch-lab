@@ -1,0 +1,80 @@
+{
+  "candidate": {
+    "geometric_feasible": true,
+    "hb_bits": 128,
+    "partition": "2d",
+    "pitch_um": 0,
+    "required_sites": 0,
+    "sites": 0
+  },
+  "engine_sha256": "bc86db7240b9c95f522a1f2fdfea025102936574df11d5f1c8ebe1c04fbf68a4",
+  "file_sha256": {
+    "rtl/mtia_cluster.sv": "7a8005a21bb17ff4398258e8f61091b632c739a2bd8927d972c65f5b4ab94d11",
+    "rtl/mtia_me_nmc.sv": "44bfe7f1fa64d69aea0c1d579d45dd5451fc1a9bc0d26e67aa5d9122f07f4171",
+    "rtl/mtia_pe.sv": "94e6db2806c1c60c12b38fbe0253a2d9ca9e9d0851d21da61a41bee6b662124f",
+    "rtl/mtia_scratch.sv": "fc17e82923deb0814de6e787cf6d99c9b58b38460447efa61467f2757c1c3dbf",
+    "rtl/mtia_selected_top.sv": "9faadb05f7989275155eb8a79316e8ac542888c3ac8280baf501adb73a65e7db",
+    "rtl/mtia_transport.sv": "d992ac3f8ee846d7705a5a3c327292daac55a9f1334839a5661111df4eb09f6b"
+  },
+  "files": [
+    "rtl/mtia_transport.sv",
+    "rtl/mtia_scratch.sv",
+    "rtl/mtia_pe.sv",
+    "rtl/mtia_me_nmc.sv",
+    "rtl/mtia_cluster.sv",
+    "rtl/mtia_selected_top.sv"
+  ],
+  "format": "mtia-rtl-v1",
+  "input_ports": {
+    "cmd_data": 96,
+    "cmd_valid": 2,
+    "load_addr": 6,
+    "load_data": 64,
+    "load_pe": 1,
+    "load_valid": 1,
+    "me_base": 6,
+    "me_count": 16,
+    "me_valid": 1,
+    "nic_data": 32,
+    "nic_valid": 1,
+    "out_ready": 1
+  },
+  "output_ports": {
+    "cmd_ready": 2,
+    "load_ready": 1,
+    "me_ready": 1,
+    "nic_ready": 1,
+    "out_data": 32,
+    "out_valid": 1,
+    "wb_data": 38,
+    "wb_ready": 1,
+    "wb_valid": 1
+  },
+  "parameters": {
+    "COARSE_BITS": 64,
+    "CUT": 0,
+    "ENTRIES": 64,
+    "HB_BITS": 128,
+    "LANES": 8,
+    "PES": 2,
+    "ROWS": 64,
+    "STAGES": 1
+  },
+  "placement_intent": {
+    "cluster.collective": 0,
+    "cluster.dma_link": 0,
+    "cluster.pe_tile[0].pe": 0,
+    "cluster.pe_tile[0].request_link": 0,
+    "cluster.pe_tile[0].response_link": 0,
+    "cluster.pe_tile[0].result_link": 0,
+    "cluster.pe_tile[0].scratch": 0,
+    "cluster.pe_tile[1].pe": 0,
+    "cluster.pe_tile[1].request_link": 0,
+    "cluster.pe_tile[1].response_link": 0,
+    "cluster.pe_tile[1].result_link": 0,
+    "cluster.pe_tile[1].scratch": 0
+  },
+  "point_id": "83955264838cf9517b7bd7b068a2368e7b5b9c5db082d4a5f4ff48134287dd80",
+  "precision": "signed INT8 operands, wrapping INT32 reduction",
+  "scope": "Connected research subsystem; placement intent only, not split-die netlists or timing closure."
+}

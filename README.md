@@ -1,8 +1,19 @@
-# HB Pitch Lab 0.3
+# HB Pitch Lab 0.4 — MTIA-like 第一階段
 
-可執行的 **pre-RTL、module-level HB pitch 研究原型**。輸入 JSON，輸出頻寬／延遲／能耗／介面面積預算、兩層溫度與圖表。0.2 新增六類參數化 RTL，能由選定的評估結果匯出固定配置；尚未實作完整 GPU。
+可執行的 **module-level HB pitch 研究原型**。0.4 新增接通 PE／scratch／ME-NMC 的 INT8/INT32 descriptor 模型、逐 cycle RTL 比對與三種切割：2D、MI300-like coarse、local scratch。可測局部供料收益及 HBM/NIC 反例，成本與 thermal 仍為未校準估計，尚未實作完整 GPU。
 
-新功能入口：[參數評估與 RTL 匯出流程](MODULE_RTL.md)。設定在 `examples/modules.json`，結果示例在 `results/module_demo`，固定配置 RTL 在 `results/generated_v02`。以下原有 `run.py` 流程仍是沒有對應 RTL 的 traffic proxy；必須使用 `module_flow.py` 才能匯出實作。
+**新架構入口：[MTIA 操作手冊](MTIA_OPERATIONS.md)**；研究來源與切割概念見 [架構代表性](ARCHITECTURE_REPRESENTATIVENESS.md)。Python 可直接依指定目標搜尋、驗收及產生相應 RTL：
+
+```sh
+python3 mtia_flow.py run --design examples/mtia.json --policy examples/mtia_policy.json --out runs/mtia_001
+python3 mtia_flow.py verify --run runs/mtia_001
+```
+
+此流程有獨立 M01–M06 檢查與 `execution_logs/mtia_history.jsonl`。新架構變更還要通過下列原有 Q01–Q09 回歸。R01/R06 仍 PARTIAL，R04/R05 未校準，不能將軟體驗收成功當作 silicon accuracy。
+
+2026-09-09 的完整驗收結果、數值對照與精簡執行日誌見 [第一階段交付紀錄](execution_logs/2026-09-09_mtia_release/HANDOFF.md)。
+
+原有六類 module benchmarks 入口：[參數評估與 RTL 匯出流程](MODULE_RTL.md)。設定在 `examples/modules.json`，結果示例在 `results/module_demo`，固定配置 RTL 在 `results/generated_v02`。以下原有 `run.py` 流程仍是沒有對應 RTL 的 traffic proxy；module flow 與新的 MTIA flow 各有明確的 RTL 契約。
 
 **0.3 新增可設定目標／限制的完整枚舉 PPA 最佳化、Pareto 集合、逐點 PPA 匯入、九項固定驗收與執行日誌。** 詳細步驟、演算法推導、成本資料格式與失敗處理見 [完整操作手冊](OPERATIONS_MANUAL.md)；其他 AI agent 先讀 [AGENTS.md](AGENTS.md)。
 
@@ -30,7 +41,7 @@ python3 -m unittest discover -s tests -v
 
 輸出：`results.json`、`sweep.csv`、`thermal_control.csv`、`fixed_power_transient.csv`、圖表與 `REPORT.md`。包含輸入快照、輸入 SHA256、引擎 SHA256；以相同參數重跑可追蹤比較。
 
-## 目前實作
+## 原有 run.py 解析流程
 
 - 任意 pitch 清單；固定 Cu fill 或固定 pad diameter。
 - 固定連線寬度：不夠放時標記 infeasible，不能偷偷改成 serialization。

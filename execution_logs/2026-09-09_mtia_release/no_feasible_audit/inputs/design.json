@@ -1,0 +1,40 @@
+{
+  "architecture": "mtia-like-int8-v1",
+  "clock_hz": 1000000000,
+  "max_cycles": 100000,
+  "parameters": {
+    "lanes": 8,
+    "pes": 2,
+    "scratch_rows": 64,
+    "shared_entries": 64
+  },
+  "physical": {
+    "coarse_bits": 64,
+    "coarse_window_um2": 40000,
+    "link_stages": 1,
+    "local_widths_bits": [
+      16
+    ],
+    "local_window_um2": 4096,
+    "pitches_um": [
+      8
+    ],
+    "signal_fraction": 0.5
+  },
+  "provenance": "Research descriptor subsystem inspired by MTIA PE/local scratch and collective offload; no vendor RTL or calibrated silicon numbers.",
+  "schema_version": 1,
+  "trace_bin_cycles": 64,
+  "workloads": [
+    {
+      "hbm_gap_cycles": 1,
+      "kernel": "gemm",
+      "name": "local_supply",
+      "nic_gap_cycles": 1,
+      "output_stall_period": 7,
+      "outputs_per_pe": 4,
+      "phases": 1,
+      "seed": 17,
+      "vectors_per_output": 4
+    }
+  ]
+}

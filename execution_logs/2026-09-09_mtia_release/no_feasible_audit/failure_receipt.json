@@ -1,0 +1,41 @@
+{
+  "test": "no_feasible_solution_is_not_PASS",
+  "run_exit": 1,
+  "verify_exit": 1,
+  "verify_stderr": "ERROR: Run is not a completed PASS\n",
+  "run_id": "20260909T150143Z-9efa0dc3d563",
+  "checks": [
+    {
+      "id": "M01",
+      "name": "input_and_provenance",
+      "status": "PASS"
+    },
+    {
+      "detail": "No feasible nondominated selection; constraints unchanged",
+      "id": "M02",
+      "name": "execution_and_exhaustive_search",
+      "status": "FAIL"
+    },
+    {
+      "id": "M03",
+      "name": "all_feasible_rtl_cycle_replay",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04",
+      "name": "all_feasible_generic_synthesis",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M05",
+      "name": "deterministic_replay_and_controls",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M06",
+      "name": "source_and_artifact_binding",
+      "status": "NOT_RUN"
+    }
+  ],
+  "status": "PASS"
+}

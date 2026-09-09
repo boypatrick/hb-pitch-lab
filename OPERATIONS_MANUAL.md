@@ -1,5 +1,7 @@
 # HB Pitch Lab：最佳化與驗收操作手冊
 
+0.4 接通 PE／scratch／ME-NMC 的子系統請使用 [MTIA_OPERATIONS.md](MTIA_OPERATIONS.md)。它沿用本手冊的最佳化策略，另有 cycle simulator、action costs、三種切割及 M01–M06 全網格 RTL/合成驗收。新架構尚無 reported-PPA adapter；下文的 point-table 匯入只適用原有 module flow。交付架構變更須同時完成 M 流程與下文 Q 流程，不可互相替代。
+
 版本：0.3，2026-09-09。適用於人類操作者與其他 AI agent。此文件中的命令可直接在 repository 根目錄執行。
 
 ## 1. 功能與完成定義

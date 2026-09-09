@@ -1,0 +1,39 @@
+{
+  "action_pj": {
+    "hb_bits": 0.1,
+    "mac_ops": 0.5,
+    "nmc_add_ops": 0.2,
+    "scratch_read_bytes": 2,
+    "scratch_write_bytes": 2.5,
+    "shared_read_bytes": 2,
+    "shared_write_bytes": 2.5,
+    "vector_ops": 0.2
+  },
+  "area_um2": {
+    "mac_lane": 100,
+    "me_control": 300,
+    "pe_control": 250,
+    "scratch_bit": 0.2,
+    "shared_bit": 0.2,
+    "transport_lane": 2,
+    "transport_state_bit": 0.5
+  },
+  "idle_w": {
+    "me_control": 0.001,
+    "pe_lane": 0.001,
+    "scratch_bit": 1e-07,
+    "shared_bit": 1e-07,
+    "transport_lane": 2e-06,
+    "transport_state_bit": 1e-07
+  },
+  "provenance": "Explicit demonstration coefficients, not MTIA/MI300 data; SRAM assumes logical 2R1W byte banks. No node scaling or timing closure.",
+  "quality": "synthetic",
+  "schema_version": 1,
+  "thermal": {
+    "ambient_c": 40,
+    "lateral_g_w_k": 0.01,
+    "quality": "synthetic",
+    "sink_g_w_k": 0.05,
+    "vertical_g_w_k": 0.2
+  }
+}

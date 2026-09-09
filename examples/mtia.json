@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "architecture": "mtia-like-int8-v1",
+  "provenance": "Research descriptor subsystem inspired by MTIA PE/local scratch and collective offload; no vendor RTL or calibrated silicon numbers.",
+  "parameters": {"pes": 2, "lanes": 8, "scratch_rows": 64, "shared_entries": 64},
+  "clock_hz": 1000000000,
+  "max_cycles": 100000,
+  "trace_bin_cycles": 64,
+  "physical": {
+    "pitches_um": [8, 4, 2],
+    "local_window_um2": 4096,
+    "coarse_window_um2": 40000,
+    "signal_fraction": 0.5,
+    "local_widths_bits": [16, 64, 128],
+    "coarse_bits": 64,
+    "link_stages": 1
+  },
+  "workloads": [
+    {"name":"local_supply", "kernel":"gemm", "outputs_per_pe":4, "vectors_per_output":4, "phases":1, "seed":17, "hbm_gap_cycles":1, "nic_gap_cycles":1, "output_stall_period":7},
+    {"name":"hbm_limited", "kernel":"gemm", "outputs_per_pe":4, "vectors_per_output":4, "phases":1, "seed":17, "hbm_gap_cycles":256, "nic_gap_cycles":1, "output_stall_period":7},
+    {"name":"nic_limited", "kernel":"gemm", "outputs_per_pe":4, "vectors_per_output":4, "phases":1, "seed":17, "hbm_gap_cycles":1, "nic_gap_cycles":1024, "output_stall_period":7},
+    {"name":"embedding", "kernel":"embedding", "outputs_per_pe":4, "vectors_per_output":2, "phases":2, "seed":23, "hbm_gap_cycles":1, "nic_gap_cycles":1, "output_stall_period":5},
+    {"name":"vector", "kernel":"vector", "outputs_per_pe":4, "vectors_per_output":2, "phases":2, "seed":29, "hbm_gap_cycles":1, "nic_gap_cycles":3, "output_stall_period":3}
+  ]
+}

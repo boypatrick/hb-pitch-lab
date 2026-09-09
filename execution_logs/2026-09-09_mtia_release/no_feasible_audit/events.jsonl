@@ -1,0 +1,4 @@
+{"check_id": "M01", "detail": "", "run_id": "20260909T150143Z-9efa0dc3d563", "sequence": 1, "status": "START", "utc": "2026-09-09T15:01:43.118431+00:00"}
+{"check_id": "M01", "detail": "", "run_id": "20260909T150143Z-9efa0dc3d563", "sequence": 2, "status": "PASS", "utc": "2026-09-09T15:01:43.121067+00:00"}
+{"check_id": "M02", "detail": "", "run_id": "20260909T150143Z-9efa0dc3d563", "sequence": 3, "status": "START", "utc": "2026-09-09T15:01:43.121160+00:00"}
+{"check_id": "M02", "detail": "No feasible nondominated selection; constraints unchanged", "run_id": "20260909T150143Z-9efa0dc3d563", "sequence": 4, "status": "FAIL", "utc": "2026-09-09T15:01:43.157165+00:00"}
